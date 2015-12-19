@@ -229,7 +229,7 @@
             "sourceLanguage": "en",
             "state": "stable",
             "targetVersion": "6.2",
-            "version": "1.1.6"
+            "version": "1.1.7"
         },
         "extensionKey": "js_contact_form",
         "name": "Contact Form",
