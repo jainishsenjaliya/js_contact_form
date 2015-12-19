@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="nl" datatype="plaintext" original="messages" date="2014-05-20T18:32:29Z" product-name="js_contact_form">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_jscontactform_domain_model_contactform">
+			    <target>Contactformulier</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.firstname">
+			    <target>Voornaam</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.lastname">
+			    <target>Achternaam</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.company">
+			    <target>Bedrijfsnaam</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.url">
+			    <target>url</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.email">
+			    <target>E-mail</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.phone">
+			    <target>Telefoon</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.fax">
+				<target>Fax</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.address">
+				<target>Adres</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.zip">
+				<target>Postcode</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.city">
+				<target>Stad</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.country">
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.message">
+			    <target>Bericht</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.subject">
+				<target>Onderwerp van gebruiker E-mail</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.page">
+				<target>Gebruiker is bereikbaar van volgende pagina</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.contact_date">
+			    <target>Gebruiker is bereikbaar van volgende Datum</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.ip">
+			    <target>IP adres</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.useragent">
+			    <target>Gebruiker</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.save">
+			    <target>Opslaan</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.required.field.alert">
+			    <target>Vul alle verplichte velden in aub.</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_firstname">
+			    <target>Voornaam is verplicht</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_lastname">
+			    <target>Achternaam is verplicht</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_company">
+			    <target>Bedrijfsnaam is verplicht</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_url">
+			    <target>Url is verplicht</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.valid_url">
+			    <target>Vul een geldige url in aub</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_email">
+			    <target>E-mail is verplicht</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.valid_email">
+			    <target>Vul een geldig e-mailadres in aub</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_phone">
+			    <target>Telefoonnumeer is verplicht</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.valid_phone">
+				<target>Vul een geldig phone!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_fax">
+			    <target>fax is verplicht</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_address">
+				<target>Adres is een verplicht veld</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_zip">
+				<target>Postcode is een verplicht veld</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.valid_zip">
+				<target>Voer geldige Zip en kan meer dan 6 karakter niet zijn!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_city">
+				<target>Stad is een verplicht veld</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_country">
+				<target>Land is een verplicht veld</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_message">
+			    <target>Bericht is verplicht</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.include_template">
+				<target>Weet u zeker dat u de "Main" statische template hebben opgenomen?</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.missing_configuration">
+				<target>E-mail informatie zoals Admin e-mail, e-mail afzender, onderwerp, enz.. Is niet ingesteld. Vul plugin configureren e-mailinstellingen</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.errorMessage">
+			    <target>We verzoeken u vriendelijk nogmaals contact op te nemen.</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.dear.sir.madam">
+			    <target>Geachte heer/mevrouw</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user.message_before_contact_data">
+			    <target>Onderstaand treft u uw contactgegevens</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user.message_after_contact_data">
+			    <target>Dank u contact met ons. Wij zullen u zo spoedig mogelijk.</target>
+			</trans-unit> 
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.admin.message_before_contact_data">
+				<target>Onder de contactgegevens</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.admin.message_after_contact_data">
+				<target>Er is een een nieuw bericht achtergelaten</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.regards">
+                <target>Met vriendelijke groet,</target>
+            </trans-unit>
+            
+            <trans-unit id="tx_jscontactform_domain_model_contactform.regards_name">
+                <target>ADMIN %1$s Technisch directeur</target>
+            </trans-unit>
+            
+            <trans-unit id="tx_jscontactform_domain_model_contactform.after_regards">
+                <target>UW-BEDRIJFSNAAM %1$s E-mail: UW-EMAIL %1$s UW-WEBSITE %1$s Tele: UW-TELEFOON</target>
+            </trans-unit>
+            
+            <trans-unit id="tx_jscontactform_domain_model_contactform.after_regards2">
+                <target>De onformatie in deze e-mail en eventuele bijlagen is vertrouwelijk en uitsluitend bedoeld voor de geadresseerde. Indien u dit bericht onbedoeld heeft ontvangen verzoeken wij u het bericht te verwijderen inclusief bijlagen en ons te informeren.</target>
+            </trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.after_regards3">
+				<target>Print deze e-mail alleen indien nodig, denk aan het milieu.</target>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

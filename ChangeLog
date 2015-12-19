@@ -1,0 +1,49 @@
+2015-12-15  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* Added plugin information
+	* Released version 1.1.6
+
+2015-06-13  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* Bug Fixes
+	* Released version 1.1.5
+    
+2015-06-13  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* Added elements to the Content Element Wizard.
+	* Released version 1.1.4
+
+2015-06-13  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* Manage Form fields from plugin option.
+	* Released version 1.1.3
+	
+2014-08-21  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* Minor Changes.
+	* Released version 1.1.2
+
+2014-06-13  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* Added option to enable/disable client side validation, 
+	* Added another option for CSS/JS to be included in header or footer,
+	* Added option to enable/disable Mobile compatible Layout. 
+	* Released version 1.1.1
+
+2014-06-02  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* Added required fields & mandatory fields function. 
+	* Manage required fields & mandatory fields via typoscript.
+	* Released version 1.1.0
+
+2014-05-26  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* Added Resopnsive Layout
+	* Released version 1.0.1
+
+2014-05-26  Jainish Senjaliya <jainish.online@gmail.com>
+
+	* This is simple Contact Form - Frontend plugin.
+	* All dynamic function are manage via typoscript.
+	* Plug & play extension
+	* Released version 1.0.0

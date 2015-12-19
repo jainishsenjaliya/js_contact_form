@@ -1,0 +1,11 @@
+
+<f:if condition="{errors}">
+	<div class="errorMessage">
+		<f:for each='{errors}' as='v' key='k'>
+			<div class="errorDiv">
+				<span><f:translate key='tx_contactform_domain_model_contactform.blank_{v}' /></span>
+			</div>
+		</f:for>
+	</div>
+</f:if>
+

@@ -1,0 +1,35 @@
+<f:layout name='Default'/>
+
+<f:section name='main'>
+
+	<div class="formLoading"></div>	
+
+	<div class="contactForm">
+	
+		<f:if condition="{template}==1">
+		  
+			<f:then>
+		  	
+				<h2><f:translate key="tx_jscontactform_domain_model_contactform" /></h2>
+		  	
+				<f:render partial="Error/Error" arguments="{errors:errors}" />
+		  	
+				<f:render partial="Success/Success" arguments="{success:success}" />
+		  	
+				<f:render partial="Error/ErrorWhileContact" arguments="{message:message}" />
+		  	
+				<f:render partial="Template/Template" arguments="{formFields:formFields}" />
+			
+			</f:then>
+		  
+			<f:else>
+	  	  
+				<f:render partial="Error/Configuration" arguments="{errors:template}" />
+				  
+			</f:else>
+	  	  
+		</f:if>
+
+	</div>
+	
+</f:section>

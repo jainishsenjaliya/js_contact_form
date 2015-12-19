@@ -1,0 +1,29 @@
+
+plugin.tx_jscontactform {
+	view {
+		# cat=plugin.tx_jscontactform/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:js_contact_form/Resources/Private/Templates/
+		# cat=plugin.tx_jscontactform/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:js_contact_form/Resources/Private/Partials/
+		# cat=plugin.tx_jscontactform/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:js_contact_form/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_jscontactform//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+plugin.tx_jscontactform{
+
+	settings{
+	
+		formFields 					= firstname, lastname, company, url, email, phone, fax, address, zip, city, country, message
+		requiredFields				= firstname, lastname, company, url, email, phone, fax, address, zip, city, country, message
+		
+		logoInMail					= typo3conf/ext/js_contact_form/Resources/Public/Images/logo.png
+		logoLink					= {$baseURL}
+	}
+}

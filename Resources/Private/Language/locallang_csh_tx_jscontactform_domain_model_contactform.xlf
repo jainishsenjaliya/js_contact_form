@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-14T14:46:12Z" product-name="js_contact_form">
+		<header/>
+		<body>
+			<trans-unit id="firstname.description">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="lastname.description">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="company.description">
+				<source>Company Name</source>
+			</trans-unit>
+			<trans-unit id="url.description">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="phone.description">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="fax.description">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="zip.description">
+				<source>Zip Code</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="country.description">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="message.description">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="subject.description">
+				<source>Subject Of Mail</source>
+			</trans-unit>
+			<trans-unit id="page.description">
+				<source>Page Name where we set contact form</source>
+			</trans-unit>
+			<trans-unit id="contact_date.description">
+				<source>Contact Date</source>
+			</trans-unit>
+			<trans-unit id="ip.description">
+				<source>IP Address</source>
+			</trans-unit>
+			<trans-unit id="useragent.description">
+				<source>User Agent</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

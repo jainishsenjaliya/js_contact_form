@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="en" datatype="plaintext" original="messages" date="2014-05-20T18:32:29Z" product-name="js_contact_form">
+		<header/>
+		<body>
+
+			<trans-unit id="plugin-title">
+				<source>Contact Form</source>
+			</trans-unit>
+			<trans-unit id="plugin-description">
+				<source>Here you can configure all required fields and mandatory fields and other configurations.</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform">
+				<target>Contact Form</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.firstname">
+				<target>First Name</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.lastname">
+				<target>Last Name</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.company">
+				<target>Company Name</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.url">
+				<target>URL</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.email">
+				<target>Email</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.phone">
+				<target>Phone</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.fax">
+				<target>Fax</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.address">
+				<target>Address</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.zip">
+				<target>Zip</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.city">
+				<target>City</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.country">
+				<target>Country</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.message">
+				<target>Message</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.subject">
+				<target>Subject of user Email</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.page">
+				<target>User has contacted from following page</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.contact_date">
+				<target>User has contacted from following Date</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.ip">
+				<target>IP Address</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.useragent">
+				<target>User Agent</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.save">
+				<target>Save</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.required.field.alert">
+				<target>Please fill all required fields.</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_firstname">
+				<target>First name can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_lastname">
+				<target>Last name can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_company">
+				<target>Company can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_url">
+				<target>URL can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.valid_url">
+				<target>Please enter valid URL</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_email">
+				<target>Email address can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.valid_email">
+				<target>Please enter valid email!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_phone">
+				<target>Phone can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.valid_phone">
+				<target>Please enter valid Phone!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_fax">
+				<target>Fax can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_address">
+				<target>Address can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_zip">
+				<target>Zip can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.valid_zip">
+				<target>Please enter valid Zip and cantnot be more than 6 character!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_city">
+				<target>City can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_country">
+				<target>Country can not be blank!</target>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.blank_message">
+				<target>Message can not be blank!</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.include_template">
+				<target>Are you sure that you have included the "Main" static template?</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.missing_configuration">
+				<target>Email information like Admin email, sender email, subject etc.. is not set. Please configure email settings in plugin</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.errorMessage">
+				<target>We kindly ask you again to contact us.</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.dear.sir.madam">
+				<target>Dear Sir/Madam</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user.message_before_contact_data">
+				<target>Below is your contact detail</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user.message_after_contact_data">
+				<target>Thanks you for contacting us. We will get back to you as soon as possible.</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.admin.message_before_contact_data">
+				<target>Below is user contact detail</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.admin.message_after_contact_data">
+				<target>User is trying to contact you.</target>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.regards">
+                <target>Yours sincerely,</target>
+            </trans-unit>
+            
+            <trans-unit id="tx_jscontactform_domain_model_contactform.regards_name">
+                <target>ADMIN %1$s Technical Director</target>
+            </trans-unit>
+            
+            <trans-unit id="tx_jscontactform_domain_model_contactform.after_regard">
+                <target>YOUR-COMPANY-NAME %1$s E-mail: YOUR-EMAIL %1$s YOUR-WEBSITE %1$s Tele: YOUR-TELEPHONE</target>
+            </trans-unit>
+            
+            <trans-unit id="tx_jscontactform_domain_model_contactform.after_regards2">
+                <target>The information in this e-mail including any attachments is confidential and may be legally privileged and is intended solely for the addressee. If you are not an intended recipient, please delete this message with all attachments and notify us.</target>
+            </trans-unit>
+            
+            <trans-unit id="tx_jscontactform_domain_model_contactform.after_regards3">
+                <target>Save the Earth. Save Paper. Don’t print this email unless needed.</target>
+            </trans-unit>
+			
+		</body>
+	</file>
+</xliff>

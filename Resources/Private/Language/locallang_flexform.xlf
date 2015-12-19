@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-03-10T16:15:06Z" product-name="js_contact_form">
+		<header/>
+		<body>
+						
+			<trans-unit id="tx_jscontactform_domain_model_contactform.generalSetting">
+				<source>General Settings</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.emailConfiguration">
+				<source>Emails Configuration</source>
+			</trans-unit>
+
+			<trans-unit id="tx_jscontactform_domain_model_contactform.fieldsConfiguration">
+				<source>Form Fields</source>
+			</trans-unit>
+						
+			<trans-unit id="tx_jscontactform_domain_model_contactform.otherSetting">
+				<source>Other Settings</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.messageAfterSubmit">
+				<source>Message will display after submitting the form</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.subjectUser">
+				<source>Subject of email that will be sent to user</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.subjectAdmin">
+				<source>Subject of email that will be sent to Administrator</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.adminName">
+				<source>Admin Name</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.adminEmail">
+				<source>Admin Email</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.senderName">
+				<source>Sender Name</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.senderEmail">
+				<source>Sender Email</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.noreply">
+				<source>noreply Name</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.noreplyEmail">
+				<source>noreply Email</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.sendMailUser">
+				<source>Send Mail to User</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.sendMailAdmin">
+				<source>Send Mail to Admin</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.bccName">
+				<source>Name of Hidden copy of mail</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.bccEmail">
+				<source>Hidden copy of email</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.sendHiddenCopyOfUserMail">
+				<source>Send Hidden copy of user mail</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.sendHiddenCopyOfAdminMail">
+				<source>Send Hidden copy of admin mail</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.storagePID">
+				<source>User contact storage folder</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.jQueryLib">
+				<source>Include jQuery Library</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.jQueryValidation">
+				<source>jQuery Valdiation</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.fancyCSS">
+				<source>Include Fancy CSS</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.responsiveLayout">
+				<source>Mobile compatible Layout</source>
+			</trans-unit>
+
+			<trans-unit id="tx_jscontactform_domain_model_contactform.includeJSinFooter">
+				<source>Include Javascript in Footer</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.includeCSSinFooter">
+				<source>Include Style in Footer</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.formFields">
+				<source>Set Fields by comma separated. those fields will be reflected in frontend side. ( Like : firstname, lastname, company, url, email, phone, fax, address, zip, city, country, message )</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_jscontactform_domain_model_contactform.requiredFields">
+				<source>Required fields. ( Like : firstname, lastname, company, url, email, phone, fax, address, zip, city, country, message )</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

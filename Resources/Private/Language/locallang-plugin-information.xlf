@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-08-10T07:44:14Z" product-name="js_contact_form">
+		<header/>
+		<body>
+			<trans-unit id="plugin-title">
+				<source>Contact Form</source>
+			</trans-unit>
+			
+			<trans-unit id="plugin-settings">
+				<source>Settings</source>
+			</trans-unit>
+			
+			<trans-unit id="plugin-value">
+				<source>Values</source>
+			</trans-unit>
+			
+			<trans-unit id="receiverName">
+				<source>Receivers Name</source>
+			</trans-unit>
+
+			<trans-unit id="receiverEmail">
+				<source>Receivers Email</source>
+			</trans-unit>
+			
+			<trans-unit id="receiverSubject">
+				<source>Subject for Email to Receiver</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
