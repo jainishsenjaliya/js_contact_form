@@ -1,0 +1,11 @@
+<div class="alert alert-danger">
+	<f:for each='{messages}' as='message'>
+		<span>
+			<f:format.printf arguments="{
+				1: '<br>'
+				}">
+				<f:translate key='tx_jscontactform_domain_model_contactform.message.error.{message}' />
+			</f:format.printf>
+		</span>
+	</f:for>
+</div>

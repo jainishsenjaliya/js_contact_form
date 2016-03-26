@@ -1,12 +1,14 @@
 <?php
 namespace JS\JsContactForm\Controller;
 
-session_start();
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
+
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2015 Jainish Senjaliya <jainish.online@gmail.com>
+ *  (c) 2014-2016 Jainish Senjaliya <jainishsenjaliya@gmail.com>
  *
  *  All rights reserved
  *
@@ -33,7 +35,8 @@ session_start();
  * @package js_contact_form
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+{
 
 	/**
 	 * contactFormRepository
@@ -42,7 +45,7 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	 * @inject
 	 */
 	protected $contactFormRepository = NULL;
-
+	
 	/**
 	 * contactFormService
 	 *
@@ -50,198 +53,165 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	 * @inject
 	 */
 	protected $contactFormService = NULL;
-
+	
 	/**
 	 * action contactForm
 	 *
 	 * @return void
 	 */
-	public function contactFormAction() {
-		$this->fullURL = \TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_SITE_URL');
-		$suc = 0;
-		if (isset($_SESSION['contactMessage'])) {
-			$suc = $_SESSION['contactMessage'];
-			unset($_SESSION['contactMessage']);
-		}
-		$requiredFieldsArr = $this->settings['requiredFields'];
-		$fieldsArr = $this->settings['formFields'];
-		$arr = $requireArr = $require = array();
-		$Formfield = $this->contactFormService->missingConfiguration($this->settings);
-		if ($Formfield == 1) {
-			if (trim($fieldsArr) != '') {
-				if (strstr($fieldsArr, ',')) {
-					$arr = explode(',', $fieldsArr);
-				}
-				$Formfield = 1;
-			} else {
-				$Formfield = 0;
-			}
-		}
-		if (trim($requiredFieldsArr) != '') {
-			if (strstr($requiredFieldsArr, ',')) {
-				$require = explode(',', $requiredFieldsArr);
-				foreach ($require as $key => $value) {
-					if ($value != '') {
-						$requireArr[] = trim($value);
-					}
-				}
-			} else {
-				$requireArr[] = $requiredFieldsArr;
-			}
-		}
-		$fields = array();
-		if ($this->request->hasArgument('contactSubmit')) {
-			$fieldsValue = $this->request->getArguments();
-		}
-		foreach ($arr as $key => $value) {
-			$val = trim($value);
-			if ($val != '') {
-				$validate = in_array($val, $requireArr) ? 'validate' : '';
-				$fields[$val] = array('field' => $val, 'validate' => $validate, 'value' => $fieldsValue[$val]);
-			}
-		}
-		if ($this->request->hasArgument('contactSubmit')) {
-			$formFields = $this->request->getArguments();
-			$error = $this->contactFormService->validate($formFields, $requireArr);
-			foreach ($error as $key => $value) {
-				$fields[$value]['error'] = 'error';
-			}
-			$err = '';
-			if (count($error) > 0) {
-				$err = $error;
-			} else {
-				$_SESSION['contactMessage'] = $this->contactFormService->insertUserData($formFields, $this->settings['storagePID'], $this->settings['subjectUser']);
-				$suc = 1;
-			}
-			// Mail sent to user and admin
-			if ($suc == 1) {
-				$arr = array(
-					'firstname' => $formFields['firstname'],
-					'lastname' => $formFields['lastname'],
-					'company' => $formFields['company'],
-					'url' => $formFields['url'],
-					'email' => $formFields['email'],
-					'phone' => $formFields['phone'],
-					'fax' => $formFields['fax'],
-					'address' => $formFields['address'],
-					'zip' => $formFields['zip'],
-					'city' => $formFields['city'],
-					'country' => $formFields['country'],
-					'message' => $formFields['message']
-				);
-				$mainLogo = 'typo3conf/ext/js_contact_form/Resources/Public/Images/logo.png';
-				$logo1 = $this->settings['logoInMail'];
-				if (strstr($logo1, 'www') || strstr($logo1, 'http')) {
-					$logoPath = $logo1;
-				} else {
-					$logoPath = $this->fullURL . $logo1;
-				}
-				if ($this->contactFormService->checkRemoteFile($logoPath)) {
-					$logo = $logoPath;
-				} else {
-					$logo = $this->fullURL . $mainLogo;
-				}
-				$arr1 = array(
-					'baseURL' => $this->fullURL,
-					'userName' => $formFields['firstname'] . ' ' . $formFields['lastname'],
-					'siteLogo' => $logo,
-					'logoLink' => $logoLink = $this->settings['logoLink'] == '' ? $this->fullURL : $this->settings['logoLink']
-				);
-				foreach ($arr as $key => $value) {
-					if ($value != '') {
-						$mailFields['mail'][] = array('field' => $key, 'value' => $value);
-					}
-				}
-				$returnPath = $attachements = $plain = $bccName = $bccEmail = '';
-				$fromName = $this->settings['senderName'];
-				$fromEmail = $this->settings['senderEmail'];
-				$replyToEmail = $this->settings['noreply'];
-				$replyToName = $this->settings['noreplyEmail'];
-				$sendMailUser = $this->settings['sendMailUser'];
-				if ($sendMailUser == 1) {
-					$emailView = $this->objectManager->get('TYPO3\\CMS\\Fluid\\View\\StandaloneView');
-					$templateName = 'Email/mailUser.html';
-					$extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
-					$templateRootPath = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($extbaseFrameworkConfiguration['view']['templateRootPath']);
-					$templatePathAndFilename = $templateRootPath . $templateName;
-					$emailView->setTemplatePathAndFilename($templatePathAndFilename);
-					$emailView->assignMultiple($mailFields);
-					$emailView->assignMultiple($arr1);
-					$emailBody = $emailView->render();
-					$to = $formFields['email'];
-					$subject = $this->settings['subjectUser'];
-					$sendHiddenCopy = $this->settings['sendHiddenCopyOfUserMail'];
-					if ($sendHiddenCopy == 1 && $this->settings['bccEmail'] != '') {
-						$bccName = $this->settings['bccName'];
-						$bccEmail = $this->settings['bccEmail'];
-					}
-					if ($to != '') {
-						$toArr = array(0 => array('name' => $formFields['firstname'], 'email' => $to));
-						$res = $this->contactFormService->sendMail($toArr, $subject, $emailBody, $plain, $fromEmail, $fromName, $replyToEmail, $replyToName, $bccName, $bccEmail, $returnPath, $attachements);
-					}
-				}
-				$sendMailAdmin = $this->settings['sendMailAdmin'];
-				if ($sendMailAdmin == 1) {
-					$emailView1 = $this->objectManager->get('TYPO3\\CMS\\Fluid\\View\\StandaloneView');
-					$templateName = 'Email/mailAdmin.html';
-					$extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
-					$templateRootPath = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($extbaseFrameworkConfiguration['view']['templateRootPath']);
-					$templatePathAndFilename = $templateRootPath . $templateName;
-					$emailView1->setTemplatePathAndFilename($templatePathAndFilename);
-					$emailView1->assignMultiple($mailFields);
-					$emailView1->assignMultiple($arr1);
-					$emailBodyAdmin = $emailView1->render();
-					$to = $this->settings['adminEmail'];
-					$subject = $this->settings['subjectAdmin'];
-					$fromName = $formFields['firstname'];
-					$fromEmail = $formFields['email'];
-					$sendHiddenCopyAdmin = $this->settings['sendHiddenCopyOfAdminMail'];
-					if ($sendHiddenCopyAdmin == 1 && $this->settings['bccEmail'] != '') {
-						$bccName = $this->settings['bccName'];
-						$bccEmail = $this->settings['bccEmail'];
-					}
-					if ($to != '') {
-						$toArr = array(0 => array('name' => $this->settings['adminName'], 'email' => $to));
-						$res = $this->contactFormService->sendMail($toArr, $subject, $emailBodyAdmin, $plain, $fromEmail, $fromName, $replyToEmail, $replyToName, $bccName, $bccEmail, $returnPath, $attachements);
-					}
-				}
-				$this->cObject = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('tslib_cObj');
-				$this->redirectURL($this->cObject, $GLOBALS['TSFE']->id, $this->fullURL);
-			}
-		}
+	public function contactFormAction()
+	{
+		$GLOBALS['TSFE']->set_no_cache();
+
+		$this->fullURL = GeneralUtility::getIndpEnv('TYPO3_SITE_URL');
+		$this->cObject = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+
 		$this->contentObj = $this->configurationManager->getContentObject();
-		$uid = $this->contentObj->data['uid'];
-		$sucArr = array(
-			'message' => $suc,
-			'successMessage' => $this->settings['messageAfterSubmit']
+
+		$this->settings['contentID'] = md5($this->contentObj->data['uid']);
+
+		$message = $this->contactFormService->getSessionData('message');
+
+		$template = $this->contactFormService->missingConfiguration($this->settings);
+
+		if ($this->request->hasArgument('contactSubmit')) {
+
+			$data = $this->request->getArguments();
+			
+			if($this->settings['contentID'] ==$data['content']){
+
+				$fieldsValue = $this->request->getArguments();
+			}
+		}
+
+		$formFields = $this->contactFormService->formFields($this->settings,$fieldsValue);
+
+		if ($this->request->hasArgument('contactSubmit')) {
+
+			$data = $this->request->getArguments();
+			
+			if($this->settings['contentID'] ==$data['content']){
+				
+				$validate = $this->contactFormService->validate($this->settings, $data);
+
+				if (count($validate) > 0) {
+
+					foreach ($validate as $key => $value) {
+						$formFields[$key]['error'] = 'error';
+					}
+
+					$message = array("error"=>$validate);
+
+				}else{
+
+					$userInformation = $this->contactFormService->userInformation($data,$formFields);
+
+					$mailUserInformation = $this->contactFormService->mailUserInformation($userInformation, $formFields);
+
+					$arr = array(
+						'baseURL'				=> $this->request->getBaseUri(),
+						'userName'				=> $userInformation['name'],
+						'siteLogo'				=> $this->contactFormService->logoInMail($this->settings, $this->fullURL),
+						'logoLink'				=> $logoLink = $this->settings['logoLink'] == '' ? $this->request->getBaseUri() : $this->settings['logoLink'],
+						'js_contact_form_all'	=> $mailUserInformation,
+						'receiverName'			=> $this->settings['receiver']['name'],
+						'current_page'		  => $this->uriBuilder->getRequest()->getRequestUri(),
+					);
+
+					$variable = array_merge($userInformation, $arr);
+
+					$user_email_body = $this->contactFormService->userEmailTemplate($variable, $this->settings);
+				
+					$user_email_body = $this->contactFormService->rewriteVariables($variable, $user_email_body);
+
+					$receiverBody = $this->settings['receiver']['body'];
+
+					$receiver_email_body	= $this->contactFormService->receiverEmailTemplate($variable, $this->settings);
+				
+					$receiver_email_body = $this->contactFormService->rewriteVariables($variable, $receiver_email_body);
+
+					$userMailSent = $receiverMailSent = 0;
+
+					$userSetting = $this->settings['user'];
+
+					$this->settings['receiver']['sender'] = $this->contactFormService->setReceiverNameandEmail($this->settings, $userInformation);
+
+					if ($userSetting['sendMail'] == 1 && !empty($userSetting['subject']) && 
+							!empty($userInformation['email']) && filter_var($userInformation['email'], FILTER_VALIDATE_EMAIL)
+							&& filter_var($userSetting['sender']['email'], FILTER_VALIDATE_EMAIL)) {
+
+						$userMailSent = $this->contactFormService->sentMailToUser($user_email_body, $userInformation, $this->settings);
+					}
+
+					$receiverSetting = $this->settings['receiver'];
+
+					if ($receiverSetting['sendMail'] == 1 && !empty($receiverSetting['subject']) && 
+						!empty($receiverSetting['email']) && filter_var($receiverSetting['email'], FILTER_VALIDATE_EMAIL)
+						&& filter_var($receiverSetting['sender']['email'], FILTER_VALIDATE_EMAIL)) {
+
+						$receiverMailSent = $this->contactFormService->sentMailToReceiver($receiver_email_body, $userInformation, $this->settings);
+					}
+
+					$mailBody = array('receiver_email_body' => $receiver_email_body, 'user_email_body' => $user_email_body,
+										'user_email_sent' => $userMailSent, 'receiver_email_sent' => $receiverMailSent,
+									 );
+
+					$marketingInformation = $this->contactFormService->marketingInformation($userInformation,$this->settings, $mailBody);
+
+					$suc = $this->contactFormService->insertUserData($userInformation, $marketingInformation);
+
+					if($suc == 1 && ( $userMailSent == 1 || $userInformation['email']=="" || $this->settings['user']['sendMail']==0)){
+
+						$sessionData = array("success"=>array("successfully_contacted"=>"successfully_contacted"));
+
+						$this->contactFormService->setSessionData('message',$sessionData);
+
+						$link = $this->settings['thanks']['redirect']!=""?$this->settings['thanks']['redirect']:$GLOBALS['TSFE']->id;
+
+						$this->redirectURL($link);
+
+					}else if($suc==1){
+
+						$sessionData = array("info"=>array("mail_not_sent"));
+
+						$this->contactFormService->setSessionData('message',$sessionData);
+
+						$this->redirectURL();
+
+					}else{
+
+						$message = array("error"=>array("data_not_inserted"));
+					}
+				}
+			}
+		}
+
+		$assignedValues = array(
+			'message'			=> $message,
+			'settings'			=> $this->settings,
+			'formFields'		=> $formFields,
+			'template'			=> $template,
 		);
-		$this->view->assign('message', $suc);
-		$this->view->assign('success', $sucArr);
-		$this->view->assign('userData', $formFields);
-		$this->view->assign('errors', $err);
-		$this->view->assign('formFields', $fields);
-		$this->view->assign('template', $Formfield);
+
+		$this->view->assignMultiple($assignedValues);
+
 		// Include Additional Data
 		$this->contactFormService->includeAdditionalData($this->settings);
 	}
-
+	
 	/**
 	 * redirectURL
 	 *
-	 * @param $cObject
-	 * @param $pid
-	 * @param $fullURL
+	 * @param $pageUid
 	 * @param $additionalParams
 	 * @return
 	 */
-	public function redirectURL($cObject, $pid, $fullURL, $additionalParams = '') {
-		$configurations['additionalParams'] = $additionalParams;
-		$configurations['returnLast'] = 'url';
-		// get it as URL
-		$configurations['parameter'] = $pid;
-		$url = $fullURL . $cObject->typolink(NULL, $configurations);
-		header('Location:' . $url);
-		die;
+	public function redirectURL($pageUid = "",$additionalParams = array())
+	{
+		$pageUid	= $pageUid >0?$pageUid:$GLOBALS['TSFE']->id;
+		$baseUri	= $this->request->getBaseUri();
+		$url 		= $this->uriBuilder->reset()->setTargetPageUid($pageUid)->setArguments($additionalParams)->buildFrontendUri();
+		
+		header('Location:' . $url); die;
 	}
-
 }

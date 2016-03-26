@@ -1,0 +1,57 @@
+<f:layout name='Default'/>
+<f:section name='main'>
+	<div style='font-family: Arial;'>
+		<f:if condition="{siteLogo}">
+			<f:link.external uri="{logoLink}" target="_blank">
+				<img src="{siteLogo}" alt="" />
+			</f:link.external>
+		</f:if>
+		<br /><br />
+		
+		<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.dear.sir.madam" />
+		<br /><br />
+		
+		<f:format.printf arguments="{
+			1: '<br />'  
+			}">
+			<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.user.message_before_contact_data" /> 
+		</f:format.printf>
+		<br /><br />
+		<f:if condition="{js_contact_form_all}">
+			<f:format.raw>{js_contact_form_all}</f:format.raw>
+		</f:if>
+		<br />
+		<f:format.printf arguments="{
+			1: '<br />'  
+			}">
+			<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.user.message_after_contact_data" /> 
+		</f:format.printf>
+		
+		<br /><br />
+		
+		<strong><f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.regards" /></strong>
+		
+		<br />
+		
+		<f:format.printf arguments="{
+			1: '<br />'  
+			}">
+			<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.regards_name" /> 
+		</f:format.printf>
+		
+		<br /><br />
+		
+		<f:format.printf arguments="{
+			1: '<br />'  
+			}">
+			<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.after_regards" /> 
+		</f:format.printf>
+		
+		<br /><br /> 
+		
+		<small style="color: #797979;"><f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.after_regards2" /></small>
+		<br /><br />
+			
+		<small style="color: #90a23a;"><f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.after_regards3" /></small>
+	</div>
+</f:section>

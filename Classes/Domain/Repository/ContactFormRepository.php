@@ -5,7 +5,7 @@ namespace JS\JsContactForm\Domain\Repository;
  *
  *  Copyright notice
  *
- *  (c) 2015 Jainish Senjaliya <jainish.online@gmail.com>
+ *  (c) 2014-2016 Jainish Senjaliya <jainishsenjaliya@gmail.com>
  *
  *  All rights reserved
  *
@@ -29,29 +29,28 @@ namespace JS\JsContactForm\Domain\Repository;
 /**
  * The repository for ContactForms
  */
-class ContactFormRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+class ContactFormRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+{
 
-	/**
-	 * insertUserData
-	 *
-	 * @param $insertArray
-	 * @return
-	 */
-	public function insertUserData($insertArray) {
-		if ($this->getDBHandle()->exec_insertQuery('tx_jscontactform_domain_model_contactform', $insertArray)) {
-			return 1;
-		} else {
-			return 2;
-		}
-	}
-
-	/**
-	 * getDBHandle
-	 *
-	 * @return
-	 */
-	public function getDBHandle() {
-		return $GLOBALS['TYPO3_DB'];
-	}
+    /**
+     * insertUserData
+     *
+     * @param $insertArray
+     * @return
+     */
+    public function insertUserData($insertArray)
+    {
+        return $this->getDBHandle()->exec_insertQuery('tx_jscontactform_domain_model_contactform', $insertArray);
+    }
+    
+    /**
+     * getDBHandle
+     *
+     * @return
+     */
+    public function getDBHandle()
+    {
+        return $GLOBALS['TYPO3_DB'];
+    }
 
 }

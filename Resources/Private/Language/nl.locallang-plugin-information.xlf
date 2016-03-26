@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="nl" datatype="plaintext" original="messages" date="2015-08-10T07:44:14Z" product-name="js_contact_form">
+	<file target-language="nl" datatype="plaintext" original="messages" date="2016-03-27T18:59:03Z" product-name="js_contact_form">
 		<header/>
 		<body>
 			<trans-unit id="plugin-title">
@@ -14,18 +14,47 @@
 			<trans-unit id="plugin-value">
 				<target>Values</target>
 			</trans-unit>
+
+			<trans-unit id="receiver.configuration">
+				<target>Ontvanger configuratie</target>
+			</trans-unit>
 			
-			<trans-unit id="receiverName">
+			<trans-unit id="receiver.name">
 				<target>Ontvanger Naam</target>
 			</trans-unit>
 
-			<trans-unit id="receiverEmail">
+			<trans-unit id="receiver.email">
 				<target>Ontvanger e-mailadres</target>
 			</trans-unit>
 			
-			<trans-unit id="receiverSubject">
+			<trans-unit id="receiver.subject">
 				<target>Onderwerp voor E-mail ontvanger</target>
 			</trans-unit>
+
+			<trans-unit id="receiver.sendMail">
+				<target>Stuur E-mail naar de ontvanger</target>
+			</trans-unit>
+
+			<trans-unit id="user.configuration">
+				<target>Gebruiker configuratie</target>
+			</trans-unit>
+
+			<trans-unit id="user.sender.name">
+				<target>Gebruiker Naam</target>
+			</trans-unit>
+
+			<trans-unit id="user.sender.email">
+				<target>Gebruiker e-mailadres</target>
+			</trans-unit>
+			
+			<trans-unit id="user.subject">
+				<target>Onderwerp voor e-mail aan Gebruiker</target>
+			</trans-unit>
+
+			<trans-unit id="user.sendMail">
+				<target>Stuur een email naar Gebruiker</target>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

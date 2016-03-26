@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-27T16:25:59Z" product-name="js_contact_form">
+		<header/>
+		<body>
+			<trans-unit id="palette.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="palette.contact">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="palette.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="palette.organization">
+				<source>Organization</source>
+			</trans-unit>
+			<trans-unit id="palette.others">
+				<source>Others</source>
+			</trans-unit>
+
+			<trans-unit id="palette.receiver">
+				<source>Receivers mail configuration</source>
+			</trans-unit>
+			<trans-unit id="palette.sender">
+				<source>Senders mail configuration</source>
+			</trans-unit>
+
+
+
+			<trans-unit id="gender.m">
+				<source>Male (Mr)</source>
+			</trans-unit>
+			<trans-unit id="gender.f">
+				<source>Female (Mrs)</source>
+			</trans-unit>
+			
+			<trans-unit id="extended">
+				<source>Extended</source>
+			</trans-unit>
+			<trans-unit id="receiver_email">
+				<source>Receivers Email</source>
+			</trans-unit>
+			<trans-unit id="receiver_email_settings">
+				<source>Receivers Email</source>
+			</trans-unit>
+			<trans-unit id="receiver_email_configuration">
+				<source>Receivers Email Configuration in plugin</source>
+			</trans-unit>
+			<trans-unit id="receiver_email_sent">
+				<source>Receivers Email Sent</source>
+			</trans-unit>
+			<trans-unit id="user_email">
+				<source>User Email</source>
+			</trans-unit>
+			<trans-unit id="user_email_settings">
+				<source>User Email</source>
+			</trans-unit>
+			<trans-unit id="user_email_configuration">
+				<source>User Email Configuration in plugin</source>
+			</trans-unit>
+			<trans-unit id="user_email_sent">
+				<source>User Email Sent</source>
+			</trans-unit>
+			<trans-unit id="marketing">
+				<source>Marketing</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

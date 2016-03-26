@@ -1,119 +1,165 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2014-03-10T16:15:06Z" product-name="js_contact_form">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-27T16:25:59Z" product-name="js_contact_form">	
 		<header/>
 		<body>
 						
-			<trans-unit id="tx_jscontactform_domain_model_contactform.generalSetting">
+			<trans-unit id="main">
 				<source>General Settings</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.emailConfiguration">
-				<source>Emails Configuration</source>
+			<trans-unit id="main.storagePID">
+				<source>Where to save user contact [ Empty = Same page ]</source>
 			</trans-unit>
 
-			<trans-unit id="tx_jscontactform_domain_model_contactform.fieldsConfiguration">
-				<source>Form Fields</source>
+
+			<trans-unit id="receiver">
+				<source>Admin E-Mail Settings</source>
 			</trans-unit>
-						
-			<trans-unit id="tx_jscontactform_domain_model_contactform.otherSetting">
-				<source>Other Settings</source>
+			<trans-unit id="receiver.sendMail">
+				<source>Send Mail To Receiver</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.messageAfterSubmit">
-				<source>Message will display after submitting the form</source>
+			<trans-unit id="receiver.subject">
+				<source>Subject of E-mail that will be sent to Receiver [ Empty subject disables mail ]</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.subjectUser">
-				<source>Subject of email that will be sent to user</source>
+			<trans-unit id="receiver.name">
+				<source>Receiver Name</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.subjectAdmin">
-				<source>Subject of email that will be sent to Administrator</source>
+			<trans-unit id="receiver.email">
+				<source>Receiver E-mail</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.adminName">
-				<source>Admin Name</source>
+			<trans-unit id="receiver.sender.name">
+				<source>Sender Name [ Empty sender will be user first_name or name OR we can set {first_name} or {name} ] </source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.adminEmail">
-				<source>Admin Email</source>
+			<trans-unit id="receiver.sender.email">
+				<source>Sender E-mail [ Empty sender will be user email address OR we can set {email} ] </source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.senderName">
-				<source>Sender Name</source>
+			<trans-unit id="receiver.noreply.name">
+				<source>Reply-To Name</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.senderEmail">
-				<source>Sender Email</source>
+			<trans-unit id="receiver.noreply.email">
+				<source>Reply-To E-mail</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.noreply">
-				<source>noreply Name</source>
+			<trans-unit id="receiver.body.default">
+				<source>Default E-mail Template to Receiver [ Default Email template path will be EXT:js_contact_form/Resources/Private/Templates/Email/Receiver.html ]</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.noreplyEmail">
-				<source>noreply Email</source>
+			<trans-unit id="receiver.body.message">
+				<source>Body text for E-mail to Receiver</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.sendMailUser">
+			<trans-unit id="receiver.cc.sendMail">
+				<source>Send Carbon copy of the mail</source>
+			</trans-unit>
+			<trans-unit id="receiver.cc.name">
+				<source>Name for the Carbon copy of mail</source>
+			</trans-unit>
+			<trans-unit id="receiver.cc.email">
+				<source>Email for the Carbon copy of mail</source>
+			</trans-unit>
+			<trans-unit id="receiver.bcc.sendMail">
+				<source>Send Hidden copy of the mail</source>
+			</trans-unit>
+			<trans-unit id="receiver.bcc.name">
+				<source>Name for the Hidden copy of mail</source>
+			</trans-unit>
+			<trans-unit id="receiver.bcc.email">
+				<source>Email for the hidden copy of mail</source>
+			</trans-unit>
+
+
+			<trans-unit id="user">
+				<source>User E-Mail Settings</source>
+			</trans-unit>
+			<trans-unit id="user.sendMail">
 				<source>Send Mail to User</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.sendMailAdmin">
-				<source>Send Mail to Admin</source>
+			<trans-unit id="user.subject">
+				<source>Subject of E-mail that will be sent to user [ Empty subject disables mail ]</source>
+			</trans-unit>
+			<trans-unit id="user.sender.name">
+				<source>Sender Name</source>
+			</trans-unit>
+			<trans-unit id="user.sender.email">
+				<source>Sender E-mail</source>
+			</trans-unit>
+			<trans-unit id="user.noreply.name">
+				<source>Reply-To Name</source>
+			</trans-unit>
+			<trans-unit id="user.noreply.email">
+				<source>Reply-To E-mail</source>
+			</trans-unit>
+			<trans-unit id="user.body.default">
+				<source>Default E-mail Template to User [ Default Email template path will be EXT:js_contact_form/Resources/Private/Templates/Email/User.html ]</source>
+			</trans-unit>
+			<trans-unit id="user.body.message">
+				<source>Body text for E-mail to User</source>
+			</trans-unit>
+			<trans-unit id="user.cc.sendMail">
+				<source>Send Carbon copy of the mail</source>
+			</trans-unit>
+			<trans-unit id="user.cc.name">
+				<source>Name for the Carbon copy of mail</source>
+			</trans-unit>
+			<trans-unit id="user.cc.email">
+				<source>Email for the Carbon copy of mail</source>
+			</trans-unit>
+			<trans-unit id="user.bcc.sendMail">
+				<source>Send Hidden copy of the mail</source>
+			</trans-unit>
+			<trans-unit id="user.bcc.name">
+				<source>Name for the Hidden copy of mail</source>
+			</trans-unit>
+			<trans-unit id="user.bcc.email">
+				<source>Email for the hidden copy of mail</source>
 			</trans-unit>
 			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.bccName">
-				<source>Name of Hidden copy of mail</source>
+
+			<trans-unit id="fields">
+				<source>Form Fields</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.bccEmail">
-				<source>Hidden copy of email</source>
+			<trans-unit id="fields.form">
+				<source>Selected fields will be reflected in frontend side.</source>
 			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.sendHiddenCopyOfUserMail">
-				<source>Send Hidden copy of user mail</source>
-			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.sendHiddenCopyOfAdminMail">
-				<source>Send Hidden copy of admin mail</source>
-			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.storagePID">
-				<source>User contact storage folder</source>
-			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.jQueryLib">
-				<source>Include jQuery Library</source>
-			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.jQueryValidation">
-				<source>jQuery Valdiation</source>
-			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.fancyCSS">
-				<source>Include Fancy CSS</source>
-			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.responsiveLayout">
-				<source>Mobile compatible Layout</source>
+			<trans-unit id="fields.required">
+				<source>Required fields</source>
 			</trans-unit>
 
-			<trans-unit id="tx_jscontactform_domain_model_contactform.includeJSinFooter">
-				<source>Include Javascript in Footer</source>
+
+			<trans-unit id="thanks">
+				<source>Submit Page</source>
+			</trans-unit>
+			<trans-unit id="thanks.messageNotification">
+				<source>Notification Message</source>
+			</trans-unit>
+			<trans-unit id="thanks.redirect">
+				<source>Redirect to any other Page after submit</source>
+			</trans-unit>
+			<trans-unit id="thanks.message">
+				<source>Text on submit page</source>
 			</trans-unit>
 			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.includeCSSinFooter">
+
+			<trans-unit id="additional">
+				<source>Other Settings</source>
+			</trans-unit>
+			<trans-unit id="additional.javascript.jQueryLib.include">
+				<source>Include jQuery Library</source>
+			</trans-unit>
+			<trans-unit id="additional.javascript.jQueryLib.includeInFooter">
+				<source>Include jQuery Library in Footer</source>
+			</trans-unit>
+			<trans-unit id="additional.javascript.validation.include">
+				<source>jQuery Valdiation</source>
+			</trans-unit>
+			<trans-unit id="additional.javascript.validation.includeInFooter">
+				<source>jQuery Valdiation in Footer</source>
+			</trans-unit>
+			<trans-unit id="additional.css.fancy.include">
+				<source>Include Fancy CSS</source>
+			</trans-unit>
+			<trans-unit id="additional.css.responsive.include">
+				<source>Mobile compatible Layout</source>
+			</trans-unit>
+			<trans-unit id="additional.css.includeInFooter">
 				<source>Include Style in Footer</source>
-			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.formFields">
-				<source>Set Fields by comma separated. those fields will be reflected in frontend side. ( Like : firstname, lastname, company, url, email, phone, fax, address, zip, city, country, message )</source>
-			</trans-unit>
-			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.requiredFields">
-				<source>Required fields. ( Like : firstname, lastname, company, url, email, phone, fax, address, zip, city, country, message )</source>
 			</trans-unit>
 
 		</body>

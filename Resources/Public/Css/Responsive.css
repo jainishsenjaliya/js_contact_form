@@ -1,0 +1,133 @@
+/*
+ *  (c) 2014 Jainish Senjaliya <jainishsenjaliya@gmail.com>
+ *  All rights reserved 
+ *  Mobile compatible Layout
+*/
+
+
+@media only screen and (min-width: 0px) and (max-width: 664px) {
+	
+	.tx-js-contact-form  {
+		width:100%;
+	}
+
+	.tx-js-contact-form  .col-sm-3 {
+		width: 100%;
+		float: left;
+	}
+
+	.tx-js-contact-form  .col-sm-9 {
+		width: 100%;
+		float: left;
+	}
+
+	.tx-js-contact-form  .col-sm-offset-3 {
+		margin-left: 0%;
+	}
+
+	.tx-js-contact-form  .form-group label{
+		text-align:inherit;
+	}
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+
+	.tx-js-contact-form	 {
+		width:100%;
+	}
+	.contactForm {
+		width:90%;
+		padding:0 5%;
+	}
+	.contactForm .inputRow label {
+		width:100%;
+		padding-bottom:10px;
+	}
+	.contactForm .inputRow input[type="text"], .contactForm .inputRow input[type="email"], .contactForm .inputRow textarea {
+		width:95%;
+		float:left;
+	}
+	.contactForm .errorMessage {
+		width:80%;
+	}
+	.contactForm .successMessage {
+		width:87%;
+	}
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+	
+	.tx-js-contact-form	 {
+		width:100%;
+	}
+	.contactForm {
+		width:90%;
+		padding:0 5%;
+	}
+	.contactForm .inputRow label {
+		width:100%;
+		padding-bottom:10px;
+	}
+	.contactForm .inputRow input[type="text"], .contactForm .inputRow input[type="email"], .contactForm .inputRow textarea {
+		width:95%;
+		float:left;
+	}
+	.contactForm .errorMessage {
+		width:85.5%;
+	}
+	.contactForm .successMessage {
+		width:87%;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 750px) {
+	
+	.tx-js-contact-form	 {
+		width:100%;
+	}
+	.contactForm {
+		width:90%;
+		padding:0 5%;
+	}
+	.contactForm .inputRow label {
+		width:36%;
+		padding-bottom:10px;
+	}
+	.contactForm .inputRow input[type="text"], .contactForm .inputRow input[type="email"], .contactForm .inputRow textarea {
+		width:60%;
+		float:left;
+	}
+	.contactForm .successMessage {
+		width:91%;
+	}
+	 .contactForm .errorMessage, {
+		width:86%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+	
+	.tx-js-contact-form	 {
+		width:80%;
+		max-width:100%;
+	}
+	.contactForm {
+		width:90%;
+		padding:0 5%;
+	}
+	.contactForm .inputRow label {
+		width:37%;
+		padding-bottom:10px;
+	}
+	.contactForm .inputRow input[type="text"], .contactForm .inputRow input[type="email"], .contactForm .inputRow textarea {
+		width:60%;
+		float:left;
+	}
+	.contactForm .errorMessage {
+		width:89%;
+	}
+	.contactForm .successMessage {
+		width:93%;
+	}
+}

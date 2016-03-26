@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="en" datatype="plaintext" original="messages" date="2016-03-27T18:59:03Z" product-name="js_contact_form">
+		<header/>
+		<body>
+			<trans-unit id="plugin-title">
+				<target>Contact Form</target>
+			</trans-unit>
+			
+			<trans-unit id="plugin-settings">
+				<target>Settings</target>
+			</trans-unit>
+			
+			<trans-unit id="plugin-value">
+				<target>Values</target>
+			</trans-unit>
+
+			<trans-unit id="receiver-configuration">
+				<target>Receiver configuration</target>
+			</trans-unit>
+			
+			<trans-unit id="receiver.name">
+				<target>Receivers Name</target>
+			</trans-unit>
+
+			<trans-unit id="receiver.email">
+				<target>Receivers Email</target>
+			</trans-unit>
+			
+			<trans-unit id="receiver.subject">
+				<target>Subject for Email to Receiver</target>
+			</trans-unit>
+
+			<trans-unit id="receiver.sendMail">
+				<target>Send Mail To Receiver</target>
+			</trans-unit>
+
+			<trans-unit id="user.configuration">
+				<target>User configuration</target>
+			</trans-unit>
+
+			<trans-unit id="user.sender.name">
+				<target>Sender Name</target>
+			</trans-unit>
+
+			<trans-unit id="user.sender.email">
+				<target>Sender Email</target>
+			</trans-unit>
+			
+			<trans-unit id="user.subject">
+				<target>Subject for Email to User</target>
+			</trans-unit>
+
+			<trans-unit id="user.sendMail">
+				<target>Send Mail To User</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

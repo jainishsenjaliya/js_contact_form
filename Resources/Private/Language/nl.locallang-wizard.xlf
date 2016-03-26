@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="nl" datatype="plaintext" original="messages" date="2015-12-12T07:44:14Z" product-name="js_contact_form">
+	<file target-language="nl" datatype="plaintext" original="messages" date="2016-03-27T18:59:03Z" product-name="js_contact_form">
 		<header/>
 		<body>
 			<trans-unit id="plugin-title">

@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-14T14:46:12Z" product-name="js_contact_form">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-27T19:18:13Z" product-name="js_contact_form">
 		<header/>
 		<body>
 			<trans-unit id="tx_jscontactform_domain_model_contactform">
 				<source>Contact Form</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.firstname">
-				<source>Firstname</source>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.name">
+				<source>Name</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.lastname">
-				<source>Lastname</source>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.first_name">
+				<source>First Name</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.company">
-				<source>Company</source>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.last_name">
+				<source>Last Name</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.url">
-				<source>Url</source>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.birthday">
+				<source>Birthday</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.email">
 				<source>Email</source>
@@ -27,35 +30,50 @@
 			<trans-unit id="tx_jscontactform_domain_model_contactform.fax">
 				<source>Fax</source>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.mobile">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.www">
+				<source>Www</source>
+			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.address">
 				<source>Address</source>
-			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.zip">
-				<source>Zip</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.city">
 				<source>City</source>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.zip">
+				<source>Zip</source>
+			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.country">
 				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.company">
+				<source>Organization</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.message">
 				<source>Message</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.subject">
-				<source>Subject</source>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.creation_date">
+				<source>User has contacted from following Date</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.page">
-				<source>Page</source>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_email_subject">
+				<source>User Email Subject</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.contact_date">
-				<source>Contact Date</source>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_email_body">
+				<source>User Email Body</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.ip">
-				<source>Ip</source>
+				<source>IP Address</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.useragent">
-				<source>Useragent</source>
+				<source>User Agent</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.page">
+				<source>User has contacted from following page</source>
 			</trans-unit>
 		</body>
 	</file>

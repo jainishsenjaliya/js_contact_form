@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="en" datatype="plaintext" original="messages" date="2016-03-27T18:59:03Z" product-name="js_contact_form">
+		<header/>
+		<body>
+			<trans-unit id="plugin-title">
+				<target>Contact Form</target>
+			</trans-unit>
+			<trans-unit id="plugin-description">
+				<target>Here you can configure all required fields and mandatory fields and other configurations.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

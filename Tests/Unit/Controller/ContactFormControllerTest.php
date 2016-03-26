@@ -3,7 +3,7 @@ namespace JS\JsContactForm\Tests\Unit\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2015 Jainish Senjaliya <jainish.online@gmail.com>
+ *  (c) 2016 Jainish Senjaliya <jainishsenjaliya@gmail.com>
  *  			
  *  All rights reserved
  *
@@ -27,20 +27,23 @@ namespace JS\JsContactForm\Tests\Unit\Controller;
 /**
  * Test case for class JS\JsContactForm\Controller\ContactFormController.
  *
- * @author Jainish Senjaliya <jainish.online@gmail.com>
+ * @author Jainish Senjaliya <jainishsenjaliya@gmail.com>
  */
-class ContactFormControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
+class ContactFormControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+{
 
 	/**
 	 * @var \JS\JsContactForm\Controller\ContactFormController
 	 */
 	protected $subject = NULL;
 
-	protected function setUp() {
+	public function setUp()
+	{
 		$this->subject = $this->getMock('JS\\JsContactForm\\Controller\\ContactFormController', array('redirect', 'forward', 'addFlashMessage'), array(), '', FALSE);
 	}
 
-	protected function tearDown() {
+	public function tearDown()
+	{
 		unset($this->subject);
 	}
 

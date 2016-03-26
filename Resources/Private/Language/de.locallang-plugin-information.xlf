@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="de" datatype="plaintext" original="messages" date="2015-08-10T07:44:14Z" product-name="js_contact_form">
+	<file target-language="de" datatype="plaintext" original="messages" date="2016-03-27T18:59:03Z" product-name="js_contact_form">
 		<header/>
 		<body>
 			<trans-unit id="plugin-title">
@@ -14,18 +14,47 @@
 			<trans-unit id="plugin-value">
 				<target>Values</target>
 			</trans-unit>
+
+			<trans-unit id="receiver.configuration">
+				<target>Empfänger konfiguration</target>
+			</trans-unit>
 			
-			<trans-unit id="receiverName">
+			<trans-unit id="receiver.name">
 				<target>Empfänger Name</target>
 			</trans-unit>
 
-			<trans-unit id="receiverEmail">
+			<trans-unit id="receiver.email">
 				<target>Empfänger E-Mail</target>
 			</trans-unit>
 			
-			<trans-unit id="receiverSubject">
+			<trans-unit id="receiver.subject">
 				<target>Betreff für E-Mail an Empfänger</target>
 			</trans-unit>
+
+			<trans-unit id="receiver.sendMail">
+				<target>Senden Sie E-Mail an Benutzer</target>
+			</trans-unit>
+
+			<trans-unit id="user.configuration">
+				<target>Benutzer konfiguration</target>
+			</trans-unit>
+
+			<trans-unit id="user.sender.name">
+				<target>Benutzer Name</target>
+			</trans-unit>
+
+			<trans-unit id="user.sender.email">
+				<target>Benutzer E-Mail</target>
+			</trans-unit>
+			
+			<trans-unit id="user.subject">
+				<target>Betreff für E-Mail an Benutzer</target>
+			</trans-unit>
+
+			<trans-unit id="user.sendMail">
+				<target>Sende eine Mail an Benutzer</target>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

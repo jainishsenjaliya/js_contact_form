@@ -1,28 +1,14 @@
-<f:form action="contactForm"  id="newContactForm">
-	     
-	<input type="hidden" class="alert" value="<f:translate key='tx_jscontactform_domain_model_contactform.required.field.alert' />"  />
-	
-	<f:for each="{formFields}" as="fields"  iteration="itemIteration">
-		
-		<div class="inputRow">
-			
-			<label for="{fields.field}"><f:translate key="tx_jscontactform_domain_model_contactform.{fields.field}" /></label>
-			
-			<f:if condition="{fields.field}=='message'">
-				<f:then>
-					<f:form.textarea property="{fields.field}" id="{fields.field}" name="{fields.field}" value="{fields.value}" additionalAttributes="{class:'{fields.validate} {fields.error}', placeholder:'<f:translate key=\'tx_jscontactform_domain_model_contactform.{fields.field}\' />',mendatory_message:'<f:translate key=\'tx_jscontactform_domain_model_contactform.blank_{fields.field}\' />'}" />
-				</f:then>
-				<f:else>
-					<f:form.textfield property="{fields.field}" id="{fields.field}" name="{fields.field}" value="{fields.value}" additionalAttributes="{class:'{fields.validate} {fields.error}', maxlength:'50', placeholder:'<f:translate key=\'tx_jscontactform_domain_model_contactform.{fields.field}\' />',mendatory_message:'<f:translate key=\'tx_jscontactform_domain_model_contactform.blank_{fields.field}\' />',valid_message:'<f:translate key=\'tx_jscontactform_domain_model_contactform.valid_{fields.field}\' />'}" />
-				</f:else>
-			</f:if>
-			
-		</div>
-		
-	</f:for>
-	
-	<div class="inputRow">
-		<f:form.submit name="contactSubmit" additionalAttributes="{class:''}" value="<f:translate key='tx_jscontactform_domain_model_contactform.save' />" title="<f:translate key='tx_jscontactform_domain_model_contactform.save' />"  />
-	</div>
-	
-</f:form>
+<f:for each="{formFields}" as="fields"  iteration="itemIteration">
+
+	<f:if condition="{fields.type}">
+		<f:then>
+			<f:render partial="Form/{fields.type}" arguments="{fields:fields}" />
+		</f:then>
+		<f:else>
+			<f:render partial="Form/Input" arguments="{fields:fields}" />
+		</f:else>
+	</f:if>
+
+</f:for>
+
+<f:render partial="Form/Submit" />

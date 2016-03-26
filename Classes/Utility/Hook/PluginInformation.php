@@ -5,12 +5,10 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
-
-
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2015 Jainish Senjaliya <jainish.online@gmail.com> 
+ *  (c) 2015-2016 Jainish Senjaliya <jainishsenjaliya@gmail.com> 
  *
  *  All rights reserved
  *
@@ -57,12 +55,6 @@ class PluginInformation {
 	protected $locallangPath = 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang-plugin-information.xlf:';
 
 	/**
-	 * @var \TYPO3\CMS\Lang\LanguageService
-	 */
-	protected $languageService = NULL;
-	
-
-	/**
 	 * Build HTML table for plugin information
 	 *
 	 * @param array $params
@@ -74,18 +66,20 @@ class PluginInformation {
 		
 		$imagePath = $this->getSubFolderOfCurrentUrl().'typo3conf/ext/js_contact_form/Resources/Public/Icons/plugin-information.png';
 		
-		$content .= '<h4><img src="' . $imagePath . '" alt="'.$this->getLocalizedLabel('plugin-title').'" title="'.$this->getLocalizedLabel('plugin-title').'" />
+		$content .= '<h2><img src="' . $imagePath . '" alt="'.$this->getLocalizedLabel('plugin-title').'" title="'.$this->getLocalizedLabel('plugin-title').'" />
 						<label style="display: inline-block; vertical-align: top; margin-top: 4px;padding-left:5px;">'.$this->getLocalizedLabel('plugin-title').'</label>
-					</h4><br>';
+					</h2><br>';
+
+		$content .= '<h3>'.$this->getLocalizedLabel('receiver.configuration').'</h3>';
 		
 		$content .= '<table class="typo3-dblist" style="width: 100%; border: 1px solid #d7d7d7;">';
 		$content .= '<tr class="bgColor2">';
 		$content .= '<td style="padding: 5px;"><strong>'.$this->getLocalizedLabel('plugin-settings').'</strong></td>';
 		$content .= '<td style="padding: 5px;"><strong>'.$this->getLocalizedLabel('plugin-value').'</strong></td>';
-		
+
 		$i = 0;
 		
-		foreach ($this->getLabelsAndValues($params) as $label => $value) {
+		foreach ($this->getLabelsAndValuesOfReceiver($params) as $label => $value) {
 			
 			$content .= '<tr class="bgColor' . ($i % 2 ? '1' : '4') . '">';
 			$content .= '<td style="width: 40%; padding: 5px;">' . $label . '</td>';
@@ -96,7 +90,7 @@ class PluginInformation {
 		
 		$content .= '</tr>';
 		$content .= '</table>';
-		
+
 		return $content;
 	}
 	
@@ -106,16 +100,41 @@ class PluginInformation {
 	 *
 	 * @return array
 	 */
-	protected function getLabelsAndValues($params) {
+	protected function getLabelsAndValuesOfReceiver($params) {
+
+
+		$imgIcon = $this->getFieldFromFlexform($params,'receiver', 'receiver.sendMail')?"checked.png":"not-checked.png";
+
 		$array = array(
-			$this->getLocalizedLabel('receiverName') => $this->getFieldFromFlexform($params,'sDEF2', 'adminName'),
-			$this->getLocalizedLabel('receiverEmail') => $this->getFieldFromFlexform($params,'sDEF2', 'adminEmail'),
-			$this->getLocalizedLabel('receiverSubject') => $this->getFieldFromFlexform($params,'sDEF2', 'subjectAdmin'),
+			$this->getLocalizedLabel('receiver.name') => $this->getFieldFromFlexform($params,'receiver', 'receiver.name'),
+			$this->getLocalizedLabel('receiver.email') => $this->getFieldFromFlexform($params,'receiver', 'receiver.email'),
+			$this->getLocalizedLabel('receiver.subject') => $this->getFieldFromFlexform($params,'receiver', 'receiver.subject'),
+			$this->getLocalizedLabel('receiver.sendMail') => $this->buildImage($imgIcon),
 		);
 
+		
 
 		return $array;
 	}
+
+	/**
+	 * Build array with label => value for table view
+	 *
+	 * @return array
+	 */
+	protected function getLabelsAndValuesOfUser($params) {
+
+		$imgIcon = $this->getFieldFromFlexform($params,'user', 'user.sendMail')?"checked.png":"not-checked.png";
+
+		$array = array(
+			$this->getLocalizedLabel('user.sender.name') => $this->getFieldFromFlexform($params,'user', 'user.sender.name'),
+			$this->getLocalizedLabel('user.sender.email') => $this->getFieldFromFlexform($params,'user', 'user.sender.email'),
+			$this->getLocalizedLabel('user.subject') => $this->getFieldFromFlexform($params,'user', 'user.subject'),
+			$this->getLocalizedLabel('user.sendMail') => $this->buildImage($imgIcon),
+		);
+
+		return $array;
+	}	
 	
 	/**
 	 * Get field value from flexform configuration
@@ -149,13 +168,12 @@ class PluginInformation {
 	 * Build image html tag
 	 *
 	 * @param string $resourcePathAndFilename like "Image/icon.png"
-	 * @param string $alt
 	 * @return string
 	 */
-	protected function buildImageMarkup($resourcePathAndFilename, $alt = '0') {
+	protected function buildImage($resourcePathAndFilename) {
 		$imagePathAndFilename = $this->getSubFolderOfCurrentUrl().'typo3conf/ext/js_contact_form/Resources/Public/Images/';
 		$imagePathAndFilename .= $resourcePathAndFilename;
-		return '<img src="' . $imagePathAndFilename . '" alt="' . $alt . '" />';
+		return '<img src="' . $imagePathAndFilename . '" alt="" />';
 	}	
 	
 	/**

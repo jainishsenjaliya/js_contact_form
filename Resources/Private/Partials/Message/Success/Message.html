@@ -1,0 +1,40 @@
+<div class="message-top">
+	<div class="alert alert-success">
+		<f:if condition="{messages.successfully_contacted}">
+			<f:then>
+				<f:if condition="{settings.thanks.messageNotification}!=''">
+					<f:then>
+						<span>{settings.thanks.messageNotification}</span>
+					</f:then>
+					<f:else>
+						<f:render section="Messages" arguments="{messages:messages}" />
+					</f:else>
+				</f:if>
+			</f:then>
+			<f:else>
+				<f:render section="Messages" arguments="{messages:messages}" />
+			</f:else>
+		</f:if>
+	</div>
+</div>
+
+<f:if condition="{messages.successfully_contacted}">
+	<f:if condition="{settings.thanks.message}!=''">
+		<div class="alert-message">
+			<f:format.html>{settings.thanks.message}</f:format.html>
+		</div>
+	</f:if>
+</f:if>
+
+
+<f:section name="Messages">
+	<f:for each='{messages}' as='message'>
+		<span>
+			<f:format.printf arguments="{
+				1: '<br>',
+				}">
+				<f:translate key='tx_jscontactform_domain_model_contactform.message.success.{message}' />
+			</f:format.printf>
+		</span>
+	</f:for>
+</f:section>

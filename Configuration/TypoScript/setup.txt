@@ -1,16 +1,12 @@
 
-plugin.tx_jscontactform {
+plugin.tx_jscontactform_contactform {
 	view {
-		templateRootPath = {$plugin.tx_jscontactform.view.templateRootPath}
-		partialRootPath = {$plugin.tx_jscontactform.view.partialRootPath}
-		layoutRootPath = {$plugin.tx_jscontactform.view.layoutRootPath}
+		templateRootPaths.0 = {$plugin.tx_jscontactform_contactform.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_jscontactform_contactform.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_jscontactform_contactform.view.layoutRootPath}
 	}
 	persistence {
-		storagePid = {$plugin.tx_jscontactform.persistence.storagePid}
-	}
-	features {
-		# uncomment the following line to enable the new Property Mapper.
-		# rewrittenPropertyMapper = 1
+		storagePid = {$plugin.tx_jscontactform_contactform.persistence.storagePid}
 	}
 }
 
@@ -51,16 +47,7 @@ plugin.tx_jscontactform._CSS_DEFAULT_STYLE (
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 
 plugin.tx_jscontactform{
-
 	settings{
-	
-		formFields 					= {$plugin.tx_jscontactform.settings.formFields}
-		requiredFields				= {$plugin.tx_jscontactform.settings.requiredFields}
-		
-		logoInMail					= {$plugin.tx_jscontactform.settings.logoInMail}
-		logoLink					= {$plugin.tx_jscontactform.settings.logoLink}
+		configuration	= 1
 	}
 }
-
-config.tx_jscontactform.features.skipDefaultArguments = 1
-plugin.tx_jscontactform.features.skipDefaultArguments = 1

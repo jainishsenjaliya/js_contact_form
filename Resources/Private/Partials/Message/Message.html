@@ -1,0 +1,27 @@
+<f:if condition="{message}">
+
+	<f:if condition="{message.success}">
+		<f:then>
+
+			<f:render partial="Message/Success/Message" arguments="{settings:settings,messages:message.success}" />
+
+		</f:then>
+		<f:else>
+
+			<f:if condition="{message.info}">
+				<f:then>
+
+					<f:render partial="Message/Info/Message" arguments="{settings:settings,messages:message.info}" />
+
+				</f:then>
+				<f:else>
+
+					<f:render partial="Message/Error/Message" arguments="{messages:message.error}" />
+
+				</f:else>
+			</f:if>
+
+		</f:else>
+	</f:if>
+
+</f:if>

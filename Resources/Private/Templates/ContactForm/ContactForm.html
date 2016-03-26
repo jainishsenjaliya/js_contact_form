@@ -4,32 +4,31 @@
 
 	<div class="formLoading"></div>	
 
-	<div class="contactForm">
-	
-		<f:if condition="{template}==1">
-		  
-			<f:then>
-		  	
-				<h2><f:translate key="tx_jscontactform_domain_model_contactform" /></h2>
-		  	
-				<f:render partial="Error/Error" arguments="{errors:errors}" />
-		  	
-				<f:render partial="Success/Success" arguments="{success:success}" />
-		  	
-				<f:render partial="Error/ErrorWhileContact" arguments="{message:message}" />
-		  	
-				<f:render partial="Template/Template" arguments="{formFields:formFields}" />
-			
-			</f:then>
-		  
-			<f:else>
-	  	  
-				<f:render partial="Error/Configuration" arguments="{errors:template}" />
-				  
-			</f:else>
-	  	  
-		</f:if>
+	<f:comment><h2><f:translate key="tx_jscontactform_domain_model_contactform" /></h2></f:comment>
 
-	</div>
-	
+	<f:if condition="{template}==1">
+
+		<f:then>
+
+			<f:render partial="Message/Message" arguments="{message:message,settings:settings}" />
+
+			<f:form action="contactForm" class="form-horizontal" id="js-contact-form-{settings.contentID}" enctype="multipart/form-data" onsubmit="return contactFormValidate(this.id);">
+
+				<f:form.hidden name="content" value="{settings.contentID}" />
+				<input type="hidden" class="alert" value="<f:translate key='tx_jscontactform_domain_model_contactform.required.field.alert' />"  />
+
+				<f:render partial="Template/Template" arguments="{formFields:formFields}" />
+
+			</f:form>	
+
+		</f:then>
+
+		<f:else>
+			
+			<f:render partial="Message/Error/Message" arguments="{messages:template}" />
+
+		</f:else>
+
+	</f:if>
+
 </f:section>

@@ -1,0 +1,172 @@
+/*
+ *  (c) 2014-2016 Jainish Senjaliya <jainishsenjaliya@gmail.com>
+ *  All rights reserved
+ *  Basic Layout 
+*/
+
+*::after, *::before {
+	box-sizing: border-box;
+}
+*{
+	box-sizing: border-box;
+}
+
+.tx-js-contact-form {
+	float:left;
+	font-family:Arial;
+	max-width: 650px;
+	padding-top:20px;
+	width:100%;
+}
+
+.tx-js-contact-form .form-group::after, 
+.tx-js-contact-form .form-group::before{
+	content: " ";
+	display: table;
+}
+
+.tx-js-contact-form .form-group::after{
+	clear: both;
+}
+
+.tx-js-contact-form .form-group {
+	margin: 0 -15px 15px;
+	clear: both;
+}
+
+.tx-js-contact-form .col-sm-3, 
+.tx-js-contact-form .col-sm-9 {
+	min-height: 1px;
+	padding:0 15px;
+	position: relative;
+}
+
+.tx-js-contact-form .col-sm-3 {
+	width: 25%;
+	float: left;
+}
+
+.tx-js-contact-form .col-sm-9 {
+	width: 75%;
+	float: left;
+}
+
+.tx-js-contact-form .col-sm-offset-3 {
+	margin-left: 25%;
+}
+
+.tx-js-contact-form .form-group label {
+	color:#333333;
+	font-size: 14px;
+	margin-bottom: 5px;
+	padding: 7px 0 0 15px;
+	font-weight: bold;
+}
+
+.tx-js-contact-form .form-control {
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	color: #555;
+	display: block;
+	font-size: 14px;
+	height: 34px;
+	line-height: 1.42857;
+	padding: 6px 12px;
+	width: 100%;
+}
+
+.tx-js-contact-form textarea.form-control {
+	height: auto;
+	overflow: hidden;
+}
+
+.tx-js-contact-form .form-control:focus{
+	border-color: #666666;
+}
+
+.tx-js-contact-form .form-control.error{
+	border-color: red;
+}
+
+.tx-js-contact-form .btn {
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.42857;
+	margin-bottom: 0;
+	padding: 6px 12px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.tx-js-contact-form .btn-default {
+	background-color: #fff;
+	border-color: #ccc;
+	color: #333;
+}
+
+.tx-js-contact-form .btn-default:hover{
+	background-image: -moz-linear-gradient(center top , #F6F6F6 10%, #D5D5D5 90%);
+	background-image:-webkit-linear-gradient(center top , #F6F6F6 10%, #D5D5D5 90%);
+	background-image:-o-linear-gradient(center top , #F6F6F6 10%, #D5D5D5 90%);
+	background-image:-ms-linear-gradient(center top , #F6F6F6 10%, #D5D5D5 90%);
+	border-color: #adadad;
+	color: #333;
+}
+
+.tx-js-contact-form .btn-default:active{
+
+	background-image: none;
+	background-color: #ffffff;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-color:none;
+	color: #666;
+}
+
+.tx-js-contact-form .alert {
+	border-radius:4px;
+	border: 1px solid #cccccc;
+	clear: both;
+	display: inline-block;
+	margin-bottom:20px;
+	padding: 13px 40px 13px 18px;
+	width: auto;
+}
+
+.tx-js-contact-form .alert span{
+	display:block !important;
+	font-size:14px;
+	line-height:18px;
+	margin-bottom: 10px;
+	width:100%;
+}
+
+.tx-js-contact-form .alert span:last-child{
+	margin-bottom: 0px;
+}
+
+.tx-js-contact-form .alert-danger, .tx-js-contact-form .alert-success, .tx-js-contact-form .alert-info  {
+	background-color: #fff;
+}
+
+.tx-js-contact-form .alert-danger{
+	width: 100%
+}
+
+.tx-js-contact-form .alert-danger span {
+	color: red;
+}
+
+.tx-js-contact-form .alert-success span {
+	color: green;
+}
+
+.tx-js-contact-form .alert-info span {
+	color: #3079ed;
+}

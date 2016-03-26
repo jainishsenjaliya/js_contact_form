@@ -6,7 +6,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2015 Jainish Senjaliya <jainish.online@gmail.com>
+*  (c) 2015-2016 Jainish Senjaliya <jainishsenjaliya@gmail.com>
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -47,7 +47,7 @@ class ContentElementWizard {
 	protected $languageService = NULL;
 
 	/**
-	 * Adding a new content element wizard item for powermail
+	 * Adding a new content element wizard item for js_contact_form 
 	 *
 	 * @param array $contentElementWizardItems
 	 * @return array
