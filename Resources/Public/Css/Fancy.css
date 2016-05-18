@@ -56,7 +56,7 @@
 }
 
 .tx-js-contact-form .form-group label {
-	color:#333333;
+	color: #c7c7c7;
 	font-size: 14px;
 	margin-bottom: 5px;
 	padding-top: 7px;
@@ -130,24 +130,24 @@
 }
 
 .tx-js-contact-form .btn-default {
-	background-color: #4d90fe;
+	background-color: #8DC63F;
 	background-image: -moz-linear-gradient(center top , #4D90FE, #4787ED);
 	background-image:-webkit-linear-gradient(center top , #4D90FE, #4787ED);
 	background-image:-o-linear-gradient(center top , #4D90FE, #4787ED);
 	background-image:-ms-linear-gradient(center top , #4D90FE, #4787ED);
-	border-color: #3079ed;
+	border-color: #8DC63F;
 	color: #fff;
 }
 
 .tx-js-contact-form .btn-default:hover{
-	background:#1b8dbf;
-	background-color: #357AE8;
+	background: #8DC63F;
+    background-color: #8DC63F;
 	background-image: -moz-linear-gradient(center top , #4D90FE 10%, #357AE8 90%);
 	background-image:-webkit-linear-gradient(center top , #4D90FE 10%, #357AE8 90%);
 	background-image:-o-linear-gradient(center top , #4D90FE 10%, #357AE8 90%);
 	background-image:-ms-linear-gradient(center top , #4D90FE 10%, #357AE8 90%);
 	border-color: #adadad;
-	border: 1px solid #2f5bb7;
+	border: 1px solid #8DC63F;
 	color: #fff;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 }

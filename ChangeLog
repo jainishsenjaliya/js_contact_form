@@ -1,8 +1,13 @@
+2016-05-18  Jainish Senjaliya <jainishsenjaliya@gmail.com>
+
+	* Bug Fixes
+	* Released version 2.0.1
+
 2016-03-27  Jainish Senjaliya <jainishsenjaliya@gmail.com>
 
 	* Major Changes.
-	* After upgrade plugin you must need to update plugin configuration
 	* Changes in design, HTML and configuration
+	* After upgrade plugin you must need to update plugin configuration
 	* Compatibility with TYPO3 7.6.99
 	* Released version 2.0.0
 

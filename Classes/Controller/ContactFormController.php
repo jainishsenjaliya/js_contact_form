@@ -208,10 +208,12 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	 */
 	public function redirectURL($pageUid = "",$additionalParams = array())
 	{
-		$pageUid	= $pageUid >0?$pageUid:$GLOBALS['TSFE']->id;
+		$pageUid	= $pageUid !=""?$pageUid:$GLOBALS['TSFE']->id;
 		$baseUri	= $this->request->getBaseUri();
 		$url 		= $this->uriBuilder->reset()->setTargetPageUid($pageUid)->setArguments($additionalParams)->buildFrontendUri();
 		
+		$url = $pageUid>0?$baseUri.$url:$url;
+				
 		header('Location:' . $url); die;
 	}
 }
