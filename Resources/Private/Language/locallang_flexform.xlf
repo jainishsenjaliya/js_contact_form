@@ -11,6 +11,7 @@
 				<source>Where to save user contact [ Empty = Same page ]</source>
 			</trans-unit>
 
+
 			<trans-unit id="receiver">
 				<source>Admin E-Mail Settings</source>
 			</trans-unit>
@@ -63,6 +64,7 @@
 				<source>Email for the hidden copy of mail</source>
 			</trans-unit>
 
+
 			<trans-unit id="user">
 				<source>User E-Mail Settings</source>
 			</trans-unit>
@@ -109,6 +111,7 @@
 				<source>Email for the hidden copy of mail</source>
 			</trans-unit>
 			
+
 			<trans-unit id="fields">
 				<source>Form Fields</source>
 			</trans-unit>
@@ -118,6 +121,7 @@
 			<trans-unit id="fields.required">
 				<source>Required fields</source>
 			</trans-unit>
+
 
 			<trans-unit id="thanks">
 				<source>Submit Page</source>
@@ -132,6 +136,7 @@
 				<source>Text on submit page</source>
 			</trans-unit>
 			
+
 			<trans-unit id="additional">
 				<source>Other Settings</source>
 			</trans-unit>
