@@ -5,10 +5,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
+
+
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2015-2016 Jainish Senjaliya <jainishsenjaliya@gmail.com> 
+ *  (c) 2015 Jainish Senjaliya <jainish.online@gmail.com> 
  *
  *  All rights reserved
  *
@@ -91,6 +93,30 @@ class PluginInformation {
 		$content .= '</tr>';
 		$content .= '</table>';
 
+
+		$content .= '<br /><h3>'.$this->getLocalizedLabel('user.configuration').'</h3>';
+
+
+		$content .= '<table class="typo3-dblist" style="width: 100%; border: 1px solid #d7d7d7;">';
+		$content .= '<tr class="bgColor2">';
+		$content .= '<td style="padding: 5px;"><strong>'.$this->getLocalizedLabel('plugin-settings').'</strong></td>';
+		$content .= '<td style="padding: 5px;"><strong>'.$this->getLocalizedLabel('plugin-value').'</strong></td>';
+
+		$i = 0;
+		
+		foreach ($this->getLabelsAndValuesOfUser($params) as $label => $value) {
+			
+			$content .= '<tr class="bgColor' . ($i % 2 ? '1' : '4') . '">';
+			$content .= '<td style="width: 40%; padding: 5px;">' . $label . '</td>';
+			$content .= '<td style="padding: 5px;">' . $value . '</td>';
+			$content .= '</tr>';
+			$i++;
+		}
+		
+		$content .= '</tr>';
+		$content .= '</table>';
+		
+		
 		return $content;
 	}
 	

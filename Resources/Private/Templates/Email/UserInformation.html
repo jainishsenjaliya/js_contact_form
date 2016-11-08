@@ -4,8 +4,9 @@
 		<table>
 			<f:for each="{mail}" as="data" key="fields" iteration="itemIteration">
 				<tr>
-					<td><strong><f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.{fields}" /></strong></td>
-					<td>:<f:if condition="{data.type}">
+					<td valign="top"><strong><f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.{fields}" /></strong></td>
+					<td valign="top">&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+					<td valign="top"><f:if condition="{data.type}">
 							<f:then>
 								<f:if condition="{data.type}=='Input'">
 									{data.value}
@@ -20,6 +21,9 @@
 									<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.{fields}.{data.value}" />
 								</f:if>
 								<f:if condition="{data.type}=='File'">
+									{data.value}
+								</f:if>
+								<f:if condition="{data.type}=='Date'">
 									{data.value}
 								</f:if>
 							</f:then>

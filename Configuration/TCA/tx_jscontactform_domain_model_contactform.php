@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'name, first_name,last_name,title,email,phone,fax,mobile,www,address,city,zip,country,company,position,message,creation_date,user_email_subject,ip,useragent,page',
+		'searchFields' => 'name,gender,first_name,middle_name,last_name,title,birthday,email,phone,fax,mobile,www,address,building,room,city,zip,region,country,company,position,image,message,description,skype,twitter,facebook,linkedin,creation_date,receiver_email_configuration,receiver_email_sent,receiver_name,receiver_email,receiver_sender_name,receiver_sender_email,receiver_noreply_name,receiver_noreply_email,receiver_cc_send,receiver_cc_name,receiver_cc_email,receiver_bcc_send,receiver_bcc_name,receiver_bcc_email,receiver_email_subject,receiver_email_body,user_email_configuration,user_email_sent,user_sender_name,user_sender_email,user_noreply_name,user_noreply_email,user_cc_send,user_cc_name,user_cc_email,user_bcc_send,user_bcc_name,user_bcc_email,user_email_subject,user_email_body,feuser,ip,useragent,visitors_country,referer_domain,referer_uri,page,mobile_device,website_language,website_language_id,browser_language,',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('js_contact_form') . 'Resources/Public/Icons/tx_jscontactform_domain_model_contactform.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, first_name,last_name,title,email,phone,fax,mobile,www,address,city,zip,country,company,position,message,creation_date,user_email_subject,ip,useragent,page',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, gender, first_name, middle_name, last_name, title, birthday, email, phone, fax, mobile, www, address, building, room, city, zip, region, country, company, position, image, message, description, skype, twitter, facebook, linkedin, creation_date, receiver_email_configuration, receiver_email_sent, receiver_name, receiver_email, receiver_sender_name, receiver_sender_email, receiver_noreply_name, receiver_noreply_email, receiver_cc_send, receiver_cc_name, receiver_cc_email, receiver_bcc_send, receiver_bcc_name, receiver_bcc_email, receiver_email_subject, receiver_email_body, user_email_configuration, user_email_sent, user_sender_name, user_sender_email, user_noreply_name, user_noreply_email, user_cc_send, user_cc_name, user_cc_email, user_bcc_send, user_bcc_name, user_bcc_email, user_email_subject, user_email_body, feuser, ip, useragent, visitors_country, referer_domain, referer_uri, page, mobile_device, website_language, website_language_id, browser_language',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, first_name,last_name,title,email,phone,fax,mobile,www,address,city,zip,country,company,position,message,creation_date,user_email_subject,ip,useragent,page, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, gender, first_name, middle_name, last_name, title, birthday, email, phone, fax, mobile, www, address, building, room, city, zip, region, country, company, position, image, message, description, skype, twitter, facebook, linkedin, creation_date, receiver_email_configuration, receiver_email_sent, receiver_name, receiver_email, receiver_sender_name, receiver_sender_email, receiver_noreply_name, receiver_noreply_email, receiver_cc_send, receiver_cc_name, receiver_cc_email, receiver_bcc_send, receiver_bcc_name, receiver_bcc_email, receiver_email_subject, receiver_email_body;;;richtext:rte_transform[mode=ts_links], user_email_configuration, user_email_sent, user_sender_name, user_sender_email, user_noreply_name, user_noreply_email, user_cc_send, user_cc_name, user_cc_email, user_bcc_send, user_bcc_name, user_bcc_email, user_email_subject, user_email_body;;;richtext:rte_transform[mode=ts_links], feuser, ip, useragent, visitors_country, referer_domain, referer_uri, page, mobile_device, website_language, website_language_id, browser_language, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -118,6 +118,24 @@ return array(
 
 		'name' => array(
 			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'gender' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.gender',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'first_name' => array(
+			'exclude' => 0,
 			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.first_name',
 			'config' => array(
 				'type' => 'input',
@@ -125,10 +143,9 @@ return array(
 				'eval' => 'trim'
 			),
 		),
-
-		'first_name' => array(
+		'middle_name' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.first_name',
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.middle_name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -151,6 +168,18 @@ return array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
+			),
+		),
+		'birthday' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.birthday',
+			'config' => array(
+				'dbType' => 'date',
+				'type' => 'input',
+				'size' => 7,
+				'eval' => 'date',
+				'checkbox' => 0,
+				'default' => '0000-00-00'
 			),
 		),
 		'email' => array(
@@ -208,6 +237,24 @@ return array(
 				'eval' => 'trim'
 			)
 		),
+		'building' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.building',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'room' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.room',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
 		'city' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.city',
@@ -220,6 +267,15 @@ return array(
 		'zip' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.zip',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'region' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.region',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -253,6 +309,52 @@ return array(
 				'eval' => 'trim'
 			),
 		),
+		'image' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.image',
+			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+				'image',
+				array(
+					'appearance' => array(
+						'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
+					),
+					'foreign_types' => array(
+						'0' => array(
+							'showitem' => '
+							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => array(
+							'showitem' => '
+							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => array(
+							'showitem' => '
+							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => array(
+							'showitem' => '
+							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => array(
+							'showitem' => '
+							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => array(
+							'showitem' => '
+							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+							--palette--;;filePalette'
+						)
+					),
+					'maxitems' => 1
+				),
+				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+			),
+		),
 		'message' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.message',
@@ -262,6 +364,52 @@ return array(
 				'rows' => 15,
 				'eval' => 'trim'
 			)
+		),
+		'description' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.description',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
+			)
+		),
+		'skype' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.skype',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'twitter' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.twitter',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'facebook' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.facebook',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'linkedin' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.linkedin',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
 		),
 		'creation_date' => array(
 			'exclude' => 0,
@@ -274,6 +422,270 @@ return array(
 				'default' => time()
 			),
 		),
+		'receiver_email_configuration' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_email_configuration',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'receiver_email_sent' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_email_sent',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'receiver_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_name',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
+			)
+		),
+		'receiver_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_email',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
+			)
+		),
+		'receiver_sender_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_sender_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'receiver_sender_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_sender_email',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'receiver_noreply_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_noreply_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'receiver_noreply_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_noreply_email',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'receiver_cc_send' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_cc_send',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'receiver_cc_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_cc_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'receiver_cc_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_cc_email',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'receiver_bcc_send' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_bcc_send',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'receiver_bcc_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_bcc_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'receiver_bcc_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_bcc_email',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'receiver_email_subject' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_email_subject',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
+			)
+		),
+		'receiver_email_body' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.receiver_email_body',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim',
+				'wizards' => array(
+					'RTE' => array(
+						'icon' => 'wizard_rte2.gif',
+						'notNewRecords'=> 1,
+						'RTEonly' => 1,
+						'module' => array(
+							'name' => 'wizard_rich_text_editor',
+							'urlParameters' => array(
+								'mode' => 'wizard',
+								'act' => 'wizard_rte.php'
+							)
+						),
+						'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+						'type' => 'script'
+					)
+				)
+			),
+		),
+		'user_email_configuration' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_email_configuration',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'user_email_sent' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_email_sent',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'user_sender_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_sender_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'user_sender_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_sender_email',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'user_noreply_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_noreply_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'user_noreply_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_noreply_email',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'user_cc_send' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_cc_send',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'user_cc_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_cc_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'user_cc_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_cc_email',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'user_bcc_send' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_bcc_send',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'user_bcc_name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_bcc_name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'user_bcc_email' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_bcc_email',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
 		'user_email_subject' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_email_subject',
@@ -283,6 +695,41 @@ return array(
 				'rows' => 15,
 				'eval' => 'trim'
 			)
+		),
+		'user_email_body' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.user_email_body',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim',
+				'wizards' => array(
+					'RTE' => array(
+						'icon' => 'wizard_rte2.gif',
+						'notNewRecords'=> 1,
+						'RTEonly' => 1,
+						'module' => array(
+							'name' => 'wizard_rich_text_editor',
+							'urlParameters' => array(
+								'mode' => 'wizard',
+								'act' => 'wizard_rte.php'
+							)
+						),
+						'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+						'type' => 'script'
+					)
+				)
+			),
+		),
+		'feuser' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.feuser',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
 		),
 		'ip' => array(
 			'exclude' => 0,
@@ -303,6 +750,34 @@ return array(
 				'eval' => 'trim'
 			)
 		),
+		'visitors_country' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.visitors_country',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'referer_domain' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.referer_domain',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'referer_uri' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.referer_uri',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
+			)
+		),
 		'page' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.page',
@@ -312,5 +787,41 @@ return array(
 				'eval' => 'trim'
 			),
 		),
+		'mobile_device' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.mobile_device',
+			'config' => array(
+				'type' => 'check',
+				'default' => 0
+			)
+		),
+		'website_language' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.website_language',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'website_language_id' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.website_language_id',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'browser_language' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:js_contact_form/Resources/Private/Language/locallang_db.xlf:tx_jscontactform_domain_model_contactform.browser_language',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		
 	),
 );## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder

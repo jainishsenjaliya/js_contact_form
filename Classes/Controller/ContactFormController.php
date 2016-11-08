@@ -2,7 +2,6 @@
 namespace JS\JsContactForm\Controller;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 /***************************************************************
  *
@@ -38,6 +37,8 @@ use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
+	/** @var \TYPO3\CMS\Core\Resource\File $fileObject */
+
 	/**
 	 * contactFormRepository
 	 *
@@ -53,7 +54,15 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	 * @inject
 	 */
 	protected $contactFormService = NULL;
-	
+
+	/**
+	 * configuration
+	 *
+	 * @var \JS\JsContactForm\Service\Configuration
+	 * @inject
+	 */
+	protected $configuration = NULL;
+
 	/**
 	 * action contactForm
 	 *
@@ -63,28 +72,26 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	{
 		$GLOBALS['TSFE']->set_no_cache();
 
-		$this->fullURL = GeneralUtility::getIndpEnv('TYPO3_SITE_URL');
-		$this->cObject = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+		$this->fullURL = $this->request->getBaseUri();
 
-		$this->contentObj = $this->configurationManager->getContentObject();
+		$this->settings['id'] = $this->configuration->getContentID();
+		$this->settings['contentID'] = md5($this->settings['id']);
 
-		$this->settings['contentID'] = md5($this->contentObj->data['uid']);
+		$message = $this->configuration->getSessionData($this->settings['id']);
 
-		$message = $this->contactFormService->getSessionData('message');
-
-		$template = $this->contactFormService->missingConfiguration($this->settings);
+		$template = $this->configuration->template();
 
 		if ($this->request->hasArgument('contactSubmit')) {
 
 			$data = $this->request->getArguments();
-			
+
 			if($this->settings['contentID'] ==$data['content']){
 
 				$fieldsValue = $this->request->getArguments();
 			}
 		}
 
-		$formFields = $this->contactFormService->formFields($this->settings,$fieldsValue);
+		$formFields = $this->contactFormService->formFields($fieldsValue);
 
 		if ($this->request->hasArgument('contactSubmit')) {
 
@@ -92,7 +99,7 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 			
 			if($this->settings['contentID'] ==$data['content']){
 				
-				$validate = $this->contactFormService->validate($this->settings, $data);
+				$validate = $this->contactFormService->validate($data);
 
 				if (count($validate) > 0) {
 
@@ -115,26 +122,36 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 						'logoLink'				=> $logoLink = $this->settings['logoLink'] == '' ? $this->request->getBaseUri() : $this->settings['logoLink'],
 						'js_contact_form_all'	=> $mailUserInformation,
 						'receiverName'			=> $this->settings['receiver']['name'],
-						'current_page'		  => $this->uriBuilder->getRequest()->getRequestUri(),
+						'current_page'			=> $this->uriBuilder->getRequest()->getRequestUri(),
 					);
 
 					$variable = array_merge($userInformation, $arr);
 
-					$user_email_body = $this->contactFormService->userEmailTemplate($variable, $this->settings);
-				
+					$userBody = $this->settings['user']['body'];
+
+					if($userBody['default']==1){
+						$user_email_body = $this->contactFormService->userEmailTemplate($variable);
+					}else{
+						$user_email_body = nl2br(nl2br($userBody['message']));
+					}
+
 					$user_email_body = $this->contactFormService->rewriteVariables($variable, $user_email_body);
 
 					$receiverBody = $this->settings['receiver']['body'];
 
-					$receiver_email_body	= $this->contactFormService->receiverEmailTemplate($variable, $this->settings);
-				
+					if($receiverBody['default']==1){
+						$receiver_email_body	= $this->contactFormService->receiverEmailTemplate($variable);
+					}else{
+						$receiver_email_body = nl2br(nl2br($receiverBody['message']));
+					}
+
 					$receiver_email_body = $this->contactFormService->rewriteVariables($variable, $receiver_email_body);
 
 					$userMailSent = $receiverMailSent = 0;
 
 					$userSetting = $this->settings['user'];
 
-					$this->settings['receiver']['sender'] = $this->contactFormService->setReceiverNameandEmail($this->settings, $userInformation);
+					$this->settings['receiver']['sender'] = $this->contactFormService->setReceiverNameandEmail($userInformation);
 
 					if ($userSetting['sendMail'] == 1 && !empty($userSetting['subject']) && 
 							!empty($userInformation['email']) && filter_var($userInformation['email'], FILTER_VALIDATE_EMAIL)
@@ -156,15 +173,17 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 										'user_email_sent' => $userMailSent, 'receiver_email_sent' => $receiverMailSent,
 									 );
 
-					$marketingInformation = $this->contactFormService->marketingInformation($userInformation,$this->settings, $mailBody);
+					$marketingInformation = $this->contactFormService->marketingInformation($this->settings, $userInformation, $mailBody);
 
-					$suc = $this->contactFormService->insertUserData($userInformation, $marketingInformation);
+					$insertArray = array_merge($userInformation, $marketingInformation);
+
+					$suc = $this->contactFormRepository->insertUserData($insertArray);
 
 					if($suc == 1 && ( $userMailSent == 1 || $userInformation['email']=="" || $this->settings['user']['sendMail']==0)){
 
 						$sessionData = array("success"=>array("successfully_contacted"=>"successfully_contacted"));
 
-						$this->contactFormService->setSessionData('message',$sessionData);
+						$this->configuration->setSessionData($this->settings['id'], $sessionData);
 
 						$link = $this->settings['thanks']['redirect']!=""?$this->settings['thanks']['redirect']:$GLOBALS['TSFE']->id;
 
@@ -174,7 +193,7 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 
 						$sessionData = array("info"=>array("mail_not_sent"));
 
-						$this->contactFormService->setSessionData('message',$sessionData);
+						$this->configuration->setSessionData($this->settings['id'], $sessionData);
 
 						$this->redirectURL();
 
@@ -196,7 +215,7 @@ class ContactFormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 		$this->view->assignMultiple($assignedValues);
 
 		// Include Additional Data
-		$this->contactFormService->includeAdditionalData($this->settings);
+		$this->configuration->additionalData();
 	}
 	
 	/**

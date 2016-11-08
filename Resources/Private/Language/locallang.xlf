@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-27T19:18:13Z" product-name="js_contact_form">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-05-31T19:18:13Z" product-name="js_contact_form">
 		<header/>
 		<body>
 			<trans-unit id="tx_jscontactform_domain_model_contactform">
@@ -9,14 +9,23 @@
 			<trans-unit id="tx_jscontactform_domain_model_contactform.name">
 				<source>Name</source>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.gender">
+				<source>Gender</source>
+			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.first_name">
 				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.middle_name">
+				<source>Middle Name</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.last_name">
 				<source>Last Name</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.title">
 				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.birthday">
+				<source>Birthday</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.email">
 				<source>Email</source>
@@ -36,11 +45,20 @@
 			<trans-unit id="tx_jscontactform_domain_model_contactform.address">
 				<source>Address</source>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.building">
+				<source>Building</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.room">
+				<source>Room</source>
+			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.city">
 				<source>City</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.zip">
 				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.region">
+				<source>Region/State</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.country">
 				<source>Country</source>
@@ -51,14 +69,119 @@
 			<trans-unit id="tx_jscontactform_domain_model_contactform.company">
 				<source>Organization</source>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.image">
+				<source>Image</source>
+			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.message">
 				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.skype">
+				<source>Skype</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.twitter">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.linkedin">
+				<source>Linkedin</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.creation_date">
 				<source>User has contacted from following Date</source>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_email_configuration">
+				<source>Receiver Email Configuration</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_email_sent">
+				<source>Receiver Email Sent</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_name">
+				<source>Receiver Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_email">
+				<source>Receiver Email</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_sender_name">
+				<source>Receiver Sender Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_sender_email">
+				<source>Receiver Sender Email</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_noreply_name">
+				<source>Receiver Noreply Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_noreply_email">
+				<source>Receiver Noreply Email</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_cc_send">
+				<source>Receiver CC Send</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_cc_name">
+				<source>Receiver CC Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_cc_email">
+				<source>Receiver CC Email</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_bcc_send">
+				<source>Receiver BCC Send</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_bcc_name">
+				<source>Receiver BCC Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_bcc_email">
+				<source>Receiver BCC Email</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_email_subject">
+				<source>Receiver Email Subject</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.receiver_email_body">
+				<source>Receiver Email Body</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_email_configuration">
+				<source>User Email Configuration</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_email_sent">
+				<source>User Email Sent</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_sender_name">
+				<source>User Sender Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_sender_email">
+				<source>User Sender Email</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_noreply_name">
+				<source>User Noreply Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_noreply_email">
+				<source>User Noreply Email</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_cc_send">
+				<source>User CC Send</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_cc_name">
+				<source>User CC Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_cc_email">
+				<source>User CC Email</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_bcc_send">
+				<source>User BCC Send</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_bcc_name">
+				<source>User BCC Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_bcc_email">
+				<source>User BCC Email</source>
+			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.user_email_subject">
 				<source>User Email Subject</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.user_email_body">
+				<source>User Email Body</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.feuser">
 				<source>FE User</source>
@@ -69,163 +192,286 @@
 			<trans-unit id="tx_jscontactform_domain_model_contactform.useragent">
 				<source>User Agent</source>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.visitors_country">
+				<source>Visitors Country</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.referer_domain">
+				<source>Referer Domain</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.referer_uri">
+				<source>Referer Uri</source>
+			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.page">
 				<source>User has contacted from following page</source>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.mobile_device">
+				<source>Mobile Device</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.website_language">
+				<source>Website Language</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.website_language_id">
+				<source>Website Language Id</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.browser_language">
+				<source>Browser Language</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.gender.m">
+				<source>Male</source>
+			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.gender.f">
+				<source>Female</source>
+			</trans-unit>
+
+			<trans-unit id="placeholder.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="placeholder.gender">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="placeholder.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="placeholder.middle_name">
+				<source>Middle Name</source>
+			</trans-unit>
+			<trans-unit id="placeholder.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="placeholder.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="placeholder.birthday">
+				<source>YYYY-MM-DD</source>
+			</trans-unit>
+			<trans-unit id="placeholder.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="placeholder.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="placeholder.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="placeholder.mobile">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="placeholder.www">
+				<source>http://www.example.com</source>
+			</trans-unit>
+			<trans-unit id="placeholder.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="placeholder.building">
+				<source>Building</source>
+			</trans-unit>
+			<trans-unit id="placeholder.room">
+				<source>Room</source>
+			</trans-unit>
+			<trans-unit id="placeholder.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="placeholder.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="placeholder.region">
+				<source>Region/State</source>
+			</trans-unit>
+			<trans-unit id="placeholder.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="placeholder.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="placeholder.company">
+				<source>Organization</source>
+			</trans-unit>
+			<trans-unit id="placeholder.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="placeholder.message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="placeholder.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="placeholder.skype">
+				<source>Skype</source>
+			</trans-unit>
+			<trans-unit id="placeholder.twitter">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="placeholder.facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="placeholder.linkedin">
+				<source>Linkedin</source>
+			</trans-unit>
+
 			<trans-unit id="tx_jscontactform_domain_model_contactform.save">
 				<source>Save</source>
 			</trans-unit>
+
 			<trans-unit id="tx_jscontactform_domain_model_contactform.required.field.alert">
 				<source>Please fill all required fields.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_name">
+			<trans-unit id="message.error.blank_name">
 				<source>Name cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_first_name">
+			<trans-unit id="message.error.blank_first_name">
 				<source>First name cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_middle_name">
+			<trans-unit id="message.error.blank_middle_name">
 				<source>Middle name cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_last_name">
+			<trans-unit id="message.error.blank_last_name">
 				<source>Last name cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_title">
+			<trans-unit id="message.error.blank_title">
 				<source>Title cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_birthday">
+			<trans-unit id="message.error.blank_birthday">
 				<source>Birthday cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_email">
+			<trans-unit id="message.error.blank_email">
 				<source>Email address cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.valid_email">
+			<trans-unit id="message.error.valid_email">
 				<source>Please enter valid email</source>
 			</trans-unit>			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_phone">
+			<trans-unit id="message.error.blank_phone">
 				<source>Phone cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.valid_phone">
+			<trans-unit id="message.error.valid_phone">
 				<source>Please enter valid Phone</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_fax">
+			<trans-unit id="message.error.blank_fax">
 				<source>Fax cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_mobile">
+			<trans-unit id="message.error.blank_mobile">
 				<source>Mobile cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.valid_mobile">
+			<trans-unit id="message.error.valid_mobile">
 				<source>Please enter valid Mobile</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_www">
+			<trans-unit id="message.error.blank_www">
 				<source>URL cannot be blank</source>
 			</trans-unit>			
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.valid_www">
+			<trans-unit id="message.error.valid_www">
 				<source>Please enter valid URL</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_address">
+			<trans-unit id="message.error.blank_address">
 				<source>Address cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_room">
+			<trans-unit id="message.error.blank_building">
+				<source>Building cannot be blank</source>
+			</trans-unit>
+			<trans-unit id="message.error.blank_room">
 				<source>Room cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_city">
+			<trans-unit id="message.error.blank_city">
 				<source>City cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_zip">
+			<trans-unit id="message.error.blank_zip">
 				<source>Zip cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.valid_zip">
+			<trans-unit id="message.error.valid_zip">
 				<source>Please enter valid Zip and cantnot be more than 6 character</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_region">
+			<trans-unit id="message.error.blank_region">
 				<source>Region cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_country">
+			<trans-unit id="message.error.blank_country">
 				<source>Country cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_position">
+			<trans-unit id="message.error.blank_position">
 				<source>Position can not be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_company">
+			<trans-unit id="message.error.blank_company">
 				<source>Organization cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_message">
+			<trans-unit id="message.error.blank_image">
+				<source>Image cannot be blank</source>
+			</trans-unit>
+			<trans-unit id="message.error.valid_image">
+				<source>Please enter valid Image</source>
+			</trans-unit>
+			<trans-unit id="message.error.blank_message">
 				<source>Message cannot be blank</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.blank_description">
+			<trans-unit id="message.error.blank_description">
 				<source>Description cannot be blank</source>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.error">
 				<source>Something missing while configuration</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.include_template">
+			<trans-unit id="message.error.include_template">
 				<source>Are you sure that you have included the "Main" static template?</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.receiver.missing_configuration">
+			<trans-unit id="message.error.receiver.missing_configuration">
 				<source>Email configuration for receiver is missing.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.receiver.cc.missing_configuration">
+			<trans-unit id="message.error.receiver.cc.missing_configuration">
 				<source>Email configuration for receiver Carbon copy [CC name or email ] is missing.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.receiver.bcc.missing_configuration">
+			<trans-unit id="message.error.receiver.bcc.missing_configuration">
 				<source>Email configuration for receiver Hidden copy [BCC name or email ] is missing.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.user.missing_configuration">
+			<trans-unit id="message.error.user.missing_configuration">
 				<source>Email configuration for user is missing.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.user.cc.missing_configuration">
+			<trans-unit id="message.error.user.cc.missing_configuration">
 				<source>Email configuration for user Carbon copy [CC name or email ] is missing.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.user.bcc.missing_configuration">
+			<trans-unit id="message.error.user.bcc.missing_configuration">
 				<source>Email configuration for user Hidden copy [BCC name or email ] is missing.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.missing_configuration">
+			<trans-unit id="message.error.missing_configuration">
 				<source>Something missing while configuration</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.missing_field_configuration">
+			<trans-unit id="message.error.missing_field_configuration">
 				<source>You have to set atleast one field in the plugin option.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.">
+			<trans-unit id="message.error.">
 				<source>We kindly request you again to contact us.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.error.data_not_inserted">
+			<trans-unit id="message.error.data_not_inserted">
 				<source>We kindly request you again to contact us.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.info.mail_not_sent">
+			<trans-unit id="message.info.mail_not_sent">
 				<source>Thanks you for your response. %1$s Unfortunately your mail is not sent, Don't worry we will get back to you as soon as possible.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.message.success.successfully_contacted">
+			<trans-unit id="message.success.successfully_contacted">
 				<source> Thanks you for your response. We will get back to you as soon as possible.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.dear.sir.madam">
+			<trans-unit id="message.email.dear">
 				<source>Dear Mr / Mrs</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.user.message_before_contact_data">
+			<trans-unit id="message.email.user.message_before_contact_data">
 				<source>Thank you for your request! We will process it as soon as possible! %1$s %1$s You have any further questions about our products or services, so we are any time happy to Available!</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.user.message_after_contact_data">
+			<trans-unit id="message.email.user.message_after_contact_data">
 				<source>Thanks you for contacting us. We will get back to you as soon as possible.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.admin.message_before_contact_data">
+			<trans-unit id="message.email.admin.message_before_contact_data">
 				<source>Below is user contact detail</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.admin.message_after_contact_data">
+			<trans-unit id="message.email.admin.message_after_contact_data">
 				<source>User is trying to contact you.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.regards">
+			<trans-unit id="message.email.regards">
 				<source>Yours sincerely,</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.regards_name">
+			<trans-unit id="message.email.regards_name">
 				<source>ADMIN %1$s Technical Director</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.after_regards">
+			<trans-unit id="message.email.after_regards">
 				<source>YOUR-COMPANY-NAME %1$s E-mail: YOUR-EMAIL %1$s YOUR-WEBSITE %1$s Tele: YOUR-TELEPHONE</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.after_regards2">
+			<trans-unit id="message.email.confidential">
 				<source>The information in this e-mail including any attachments is confidential and may be legally privileged and is intended solely for the addressee. If you are not an intended recipient, please delete this message with all attachments and notify us.</source>
 			</trans-unit>
-			<trans-unit id="tx_jscontactform_domain_model_contactform.after_regards3">
+			<trans-unit id="message.email.save_paper">
 				<source>Save the Earth. Save Paper. Don’t print this email unless needed.</source>
 			</trans-unit>
 		</body>

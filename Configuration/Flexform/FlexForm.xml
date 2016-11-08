@@ -126,6 +126,87 @@
 							</config>
 						</TCEforms>
 					</settings.receiver.noreply.email>
+					<settings.receiver.body.default>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:receiver.body.default</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.receiver.body.default>
+					<settings.receiver.body.message>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:receiver.body.message</label>
+							<config>
+								<type>text</type>
+								<default>{js_contact_form_all}</default>
+							</config>
+							<defaultExtras>richtext[cut|copy|paste|formatblock|bold|italic|underline|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image|line|chMode]:rte_transform[mode=ts_css]</defaultExtras>
+						</TCEforms>
+					</settings.receiver.body.message>
+					<settings.receiver.cc.sendMail>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:receiver.cc.sendMail</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.receiver.cc.sendMail>
+					<settings.receiver.cc.name>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:receiver.cc.name</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>250</max>
+							</config>
+						</TCEforms>
+					</settings.receiver.cc.name>
+					<settings.receiver.cc.email>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:receiver.cc.email</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>250</max>
+							</config>
+						</TCEforms>
+					</settings.receiver.cc.email>
+					<settings.receiver.bcc.sendMail>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:receiver.bcc.sendMail</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.receiver.bcc.sendMail>
+					<settings.receiver.bcc.name>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:receiver.bcc.name</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>250</max>
+							</config>
+						</TCEforms>
+					</settings.receiver.bcc.name>
+					<settings.receiver.bcc.email>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:receiver.bcc.email</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>250</max>
+							</config>
+						</TCEforms>
+					</settings.receiver.bcc.email>
 				</el>
 			</ROOT>
 		</receiver>
@@ -203,6 +284,87 @@
 							</config>
 						</TCEforms>
 					</settings.user.noreply.email>
+					<settings.user.body.default>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:user.body.default</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.user.body.default>
+					<settings.user.body.message>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:user.body.message</label>
+							<config>
+								<type>text</type>
+								<default>{js_contact_form_all}</default>
+							</config>
+							<defaultExtras>richtext[cut|copy|paste|formatblock|bold|italic|underline|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image|line|chMode]:rte_transform[mode=ts_css]</defaultExtras>
+						</TCEforms>
+					</settings.user.body.message>
+					<settings.user.cc.sendMail>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:user.cc.sendMail</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.user.cc.sendMail>
+					<settings.user.cc.name>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:user.cc.name</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>250</max>
+							</config>
+						</TCEforms>
+					</settings.user.cc.name>
+					<settings.user.cc.email>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:user.cc.email</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>250</max>
+							</config>
+						</TCEforms>
+					</settings.user.cc.email>
+					<settings.user.bcc.sendMail>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:user.bcc.sendMail</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.user.bcc.sendMail>
+					<settings.user.bcc.name>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:user.bcc.name</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>250</max>
+							</config>
+						</TCEforms>
+					</settings.user.bcc.name>
+					<settings.user.bcc.email>
+						<TCEforms>
+							<label>LLL:EXT:js_contact_form/Resources/Private/Language/locallang_flexform.xlf:user.bcc.email</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>250</max>
+							</config>
+						</TCEforms>
+					</settings.user.bcc.email>
 				</el>
 			</ROOT>
 		</user>
@@ -220,9 +382,17 @@
 							<config>
 								<type>select</type>
 								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.gender</numIndex>
+										<numIndex index="1">gender</numIndex>
+									</numIndex>
 									<numIndex index="2" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.first_name</numIndex>
 										<numIndex index="1">first_name</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.middle_name</numIndex>
+										<numIndex index="1">middle_name</numIndex>
 									</numIndex>
 									<numIndex index="4" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.last_name</numIndex>
@@ -231,6 +401,10 @@
 									<numIndex index="5" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.title</numIndex>
 										<numIndex index="1">title</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.birthday</numIndex>
+										<numIndex index="1">birthday</numIndex>
 									</numIndex>
 									<numIndex index="7" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.email</numIndex>
@@ -256,6 +430,14 @@
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.address</numIndex>
 										<numIndex index="1">address</numIndex>
 									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.building</numIndex>
+										<numIndex index="1">building</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.room</numIndex>
+										<numIndex index="1">room</numIndex>
+									</numIndex>
 									<numIndex index="15" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.city</numIndex>
 										<numIndex index="1">city</numIndex>
@@ -263,6 +445,10 @@
 									<numIndex index="16" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.zip</numIndex>
 										<numIndex index="1">zip</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.region</numIndex>
+										<numIndex index="1">region</numIndex>
 									</numIndex>
 									<numIndex index="18" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.country</numIndex>
@@ -279,6 +465,10 @@
 									<numIndex index="22" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.message</numIndex>
 										<numIndex index="1">message</numIndex>
+									</numIndex>
+									<numIndex index="23" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.description</numIndex>
+										<numIndex index="1">description</numIndex>
 									</numIndex>
 								</items>
 								<size>11</size>
@@ -293,9 +483,17 @@
 							<config>
 								<type>select</type>
 								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.gender</numIndex>
+										<numIndex index="1">gender</numIndex>
+									</numIndex>
 									<numIndex index="2" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.first_name</numIndex>
 										<numIndex index="1">first_name</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.middle_name</numIndex>
+										<numIndex index="1">middle_name</numIndex>
 									</numIndex>
 									<numIndex index="4" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.last_name</numIndex>
@@ -304,6 +502,10 @@
 									<numIndex index="5" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.title</numIndex>
 										<numIndex index="1">title</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.birthday</numIndex>
+										<numIndex index="1">birthday</numIndex>
 									</numIndex>
 									<numIndex index="7" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.email</numIndex>
@@ -329,6 +531,14 @@
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.address</numIndex>
 										<numIndex index="1">address</numIndex>
 									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.building</numIndex>
+										<numIndex index="1">building</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.room</numIndex>
+										<numIndex index="1">room</numIndex>
+									</numIndex>
 									<numIndex index="15" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.city</numIndex>
 										<numIndex index="1">city</numIndex>
@@ -336,6 +546,10 @@
 									<numIndex index="16" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.zip</numIndex>
 										<numIndex index="1">zip</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.region</numIndex>
+										<numIndex index="1">region</numIndex>
 									</numIndex>
 									<numIndex index="18" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.country</numIndex>
@@ -352,6 +566,10 @@
 									<numIndex index="22" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.message</numIndex>
 										<numIndex index="1">message</numIndex>
+									</numIndex>
+									<numIndex index="23" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.description</numIndex>
+										<numIndex index="1">description</numIndex>
 									</numIndex>
 								</items>
 								<size>11</size>

@@ -1,56 +1,57 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
+..  Editor configuration
+	...................................................
+	* utf-8 with BOM as encoding
+	* tab indent with 4 characters for code snippet.
+	* optional: soft carriage return preferred.
 
-.. include:: Includes.txt
+.. Includes roles, substitutions, ...
+.. include:: _IncludedDirectives.rst
 
-.. _start:
+=================
+Extension Name
+=================
 
-=============================================================
-Contact Form 
-=============================================================
+:Extension name: Contact Form
+:Extension key: js_contact_form
+:Version: 1.1.1
+:Description: manuals covering TYPO3 extension "Contact Form"
+:Language: en
+:Author: Jainish Senjaliya
+:Creation: 2014-06-13
+:Generation: 12:52
+:Licence: Open Content License available from `www.opencontent.org/opl.shtml <http://www.opencontent.org/opl.shtml>`_
 
-.. only:: html
+The content of this document is related to TYPO3, a GNU/GPL CMS/Framework available from `www.typo3.org
+<http://www.typo3.org/>`_
 
-	:Classification:
-		js_contact_form
-
-	:Version:
-		|release|
-
-	:Language:
-		en
-
-	:Description:
-		Contact form extensions for TYPO3 where user can send his contact information to admin & copy of that is also sent to user on their email. Admin can select required fields & can also manage the mandatory fields for the form via typoscripts. All dynamic stuffs can easily managed from typoscript. This Form has both server & client side validations.
-
-	:Keywords:
-		Contact Form, Form, contactformulier, Contact, formulier, js_contact_form
-
-	:Copyright:
-		2014 - 2016
-
-	:Author:
-		Jainish Senjaliya
-
-	:Email:
-		jainishsenjaliya@gmail.com
-
-	:License:
-		This document is published under the Open Content License
-		available from http://www.opencontent.org/opl.shtml
-
-	:Rendered:
-		|today|
-
-	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
-
-	**Table of Contents**
+**Table of Contents**
 
 .. toctree::
-	:maxdepth: 3
-	:titlesonly:
+	:maxdepth: 2
 
-	Links
+	ProjectInformation
+	UserManual
+	AdministratorManual
+	TyposcriptReference
+	DeveloperCorner
+	RestructuredtextHelp
+
+.. STILL TO ADD IN THIS DOCUMENT
+	@todo: add section about how screenshots can be automated. Pointer to PhantomJS could be added.
+	@todo: explain how documentation can be rendered locally and remotely.
+	@todo: explain what files should be versionned and what not (_build, Makefile, conf.py, ...)
+
+.. include:: ../Readme.rst
+
+What does it do?
+=================
+
+In this chapter should be given a brief overview of the extension. What does it do? What problem does it solve? Who is interested in this? Basically, this section includes everything people need to know to decide whether they should go on with this extension.
+
+.. figure:: Images/IntroductionPackage.png
+		:width: 500px
+		:alt: Introduction Package
+
+		Introduction Package just after installation (caption of the image)
+
+		How the Frontend of the Introduction Package looks like just after installation (legend of the image)

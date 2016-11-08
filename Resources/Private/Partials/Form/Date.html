@@ -1,0 +1,18 @@
+<div class="form-group">
+
+	<label class="col-sm-3" for="{fields.field}">
+		<f:translate key="tx_jscontactform_domain_model_contactform.{fields.field}" />
+		<f:if condition="{fields.validate}"><span class="mandatory">*</span></f:if>
+	</label>
+
+	<div class="col-sm-9">
+		<f:form.textfield 
+			property="{fields.field}" 
+			name="{fields.field}" 
+			value="{fields.value}" 
+			readonly="readonly"
+			class="form-control {fields.field} {fields.validate} {fields.error} {fields.type}"
+			additionalAttributes="{maxlength:'10', placeholder:'<f:translate key=\'placeholder.{fields.field}\' />',mendatory_message:'<f:translate key=\'message.error.blank_{fields.field}\' />',valid_message:'<f:translate key=\'message.error.valid_{fields.field}\' />'}" />
+	</div>
+
+</div>

@@ -56,7 +56,7 @@
 }
 
 .tx-js-contact-form .form-group label {
-	color: #c7c7c7;
+	color:#333333;
 	font-size: 14px;
 	margin-bottom: 5px;
 	padding-top: 7px;
@@ -130,24 +130,24 @@
 }
 
 .tx-js-contact-form .btn-default {
-	background-color: #8DC63F;
+	background-color: #4d90fe;
 	background-image: -moz-linear-gradient(center top , #4D90FE, #4787ED);
 	background-image:-webkit-linear-gradient(center top , #4D90FE, #4787ED);
 	background-image:-o-linear-gradient(center top , #4D90FE, #4787ED);
 	background-image:-ms-linear-gradient(center top , #4D90FE, #4787ED);
-	border-color: #8DC63F;
+	border-color: #3079ed;
 	color: #fff;
 }
 
 .tx-js-contact-form .btn-default:hover{
-	background: #8DC63F;
-    background-color: #8DC63F;
+	background:#1b8dbf;
+	background-color: #357AE8;
 	background-image: -moz-linear-gradient(center top , #4D90FE 10%, #357AE8 90%);
 	background-image:-webkit-linear-gradient(center top , #4D90FE 10%, #357AE8 90%);
 	background-image:-o-linear-gradient(center top , #4D90FE 10%, #357AE8 90%);
 	background-image:-ms-linear-gradient(center top , #4D90FE 10%, #357AE8 90%);
 	border-color: #adadad;
-	border: 1px solid #8DC63F;
+	border: 1px solid #2f5bb7;
 	color: #fff;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 }
@@ -158,6 +158,10 @@
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border-color:none;
 	color: #4d90fe;
+}
+
+.tx-js-contact-form .mandatory{
+	color: red;
 }
 
 .tx-js-contact-form .message-top {

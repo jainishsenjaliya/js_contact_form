@@ -2,12 +2,12 @@
 <f:section name='main'>
 
 	<div style='font-family: Arial;'>
-		<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.dear.sir.madam" /> {receiverName}
+		<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:message.email.dear" /> {receiverName}
 		<br /><br />
 		<f:format.printf arguments="{
 			1: '<br />'  
 			}">
-			<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.admin.message_before_contact_data" /> 
+			<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:message.email.admin.message_before_contact_data" /> 
 		</f:format.printf>
 		<br /><br />
 		<f:if condition="{js_contact_form_all}">
@@ -17,10 +17,10 @@
 		<f:format.printf arguments="{
 			1: '<br />'  
 			}">
-			<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.admin.message_after_contact_data" /> 
+			<f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:message.email.admin.message_after_contact_data" /> 
 		</f:format.printf>
 		<br /><br />
-		<strong><f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.regards" /></strong>
+		<strong><f:translate key="LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:message.email.regards" /></strong>
 		<br />
 		{name}
 	</div>

@@ -3,6 +3,22 @@
  *  All rights reserved 
 */
 
+	jQuery(function() {
+
+		var d = new Date();
+		var year = d.getFullYear() - 18 ;
+
+		jQuery('.Date').datepicker({
+			dateFormat: 'yy-mm-dd',
+			changeMonth: true,
+			changeYear: true,
+			yearRange: "-100:-10",
+			defaultDate: new Date(year, d.getMonth(), d.getDate()),
+			buttonImage: 'Images/Calendar.gif',
+			buttonImageOnly: true,
+		});
+	});
+
 	function checkValidEmail(field) {
 		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		if (!filter.test(field.val())) {
@@ -37,7 +53,7 @@
 	function contactFormValidate(id) {
 
 		var cValids = 0;
- 			
+
 		jQuery("#"+id+" .validate").removeClass("error");
 		
 		jQuery("#"+id+" .validate").each(function(){
@@ -185,6 +201,6 @@ jQuery(document).ready(function() {
 		}
 	})
 	
-	jQuery(".alert-success").delay(9000).hide(500);
+	jQuery(".alert-success").delay(10000).hide(500);
 	
 });
