@@ -69,7 +69,7 @@ class PluginInformation {
 		$imagePath = $this->getSubFolderOfCurrentUrl().'typo3conf/ext/js_contact_form/Resources/Public/Icons/plugin-information.png';
 		
 		$content .= '<h2><img src="' . $imagePath . '" alt="'.$this->getLocalizedLabel('plugin-title').'" title="'.$this->getLocalizedLabel('plugin-title').'" />
-						<label style="display: inline-block; vertical-align: top; margin-top: 4px;padding-left:5px;">'.$this->getLocalizedLabel('plugin-title').'</label>
+						<label style="display: inline-block; vertical-align: middle; margin-top: 4px;padding-left:5px;">'.$this->getLocalizedLabel('plugin-title').'</label>
 					</h2><br>';
 
 		$content .= '<h3>'.$this->getLocalizedLabel('receiver.configuration').'</h3>';

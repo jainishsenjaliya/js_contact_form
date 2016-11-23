@@ -222,6 +222,9 @@
 			<trans-unit id="tx_jscontactform_domain_model_contactform.gender.f">
 				<target>Vrouwelijke (vrouw)</target>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.captcha">
+				<target>Captcha</target>
+			</trans-unit>
 
 			<trans-unit id="placeholder.name">
 				<target>Naam</target>
@@ -306,6 +309,9 @@
 			</trans-unit>
 			<trans-unit id="placeholder.linkedin">
 				<target>Linkedin</target>
+			</trans-unit>
+			<trans-unit id="placeholder.captcha">
+				<target>Enter resulteren hier</target>
 			</trans-unit>
 
 			<trans-unit id="tx_jscontactform_domain_model_contactform.save">
@@ -401,6 +407,12 @@
 			</trans-unit>
 			<trans-unit id="message.error.blank_description">
 				<target>Beschrijving is verplicht</target>
+			</trans-unit>
+			<trans-unit id="message.error.blank_captcha">
+				<target>vul dan resulteren hier</target>
+			</trans-unit>
+			<trans-unit id="message.error.valid_captcha">
+				<target>ingevoerde Wrong captcha code</target>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.error">
 				<target>Iets ontbreekt, terwijl de configuratie</target>

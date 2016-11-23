@@ -222,6 +222,9 @@
 			<trans-unit id="tx_jscontactform_domain_model_contactform.gender.f">
 				<target>Weiblich (Frau)</target>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.captcha">
+				<target>Spamschutz</target>
+			</trans-unit>
 
 			<trans-unit id="placeholder.name">
 				<target>Name</target>
@@ -306,6 +309,9 @@
 			</trans-unit>
 			<trans-unit id="placeholder.linkedin">
 				<target>Linkedin</target>
+			</trans-unit>
+			<trans-unit id="placeholder.captcha">
+				<target>Bitte Ergebnis hier eingeben</target>
 			</trans-unit>
 
 			<trans-unit id="tx_jscontactform_domain_model_contactform.save">
@@ -401,6 +407,12 @@
 			</trans-unit>
 			<trans-unit id="message.error.blank_description">
 				<target>Beschreibung is Pflichtfeld</target>
+			</trans-unit>
+			<trans-unit id="message.error.blank_captcha">
+				<target>Dieses Feld muss ausgefüllt werden!</target>
+			</trans-unit>
+			<trans-unit id="message.error.valid_captcha">
+				<target>Falscher Captcha-Code eingegeben!</target>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.error">
 				<target>Fehlt etwas, während Konfigurations</target>

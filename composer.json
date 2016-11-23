@@ -1,10 +1,10 @@
 {
-  "name": "Jainish Senjaliya/js_contact_form",
+  "name": "jainishsenjaliya/js-contact-form",
   "description": "Contact form extensions for TYPO3 where user can send his contact information to admin & copy of that is also sent to user on their email. Admin can select required fields & can also manage the mandatory fields for the form via typoscripts. All dynamic stuffs can easily managed from typoscript. This Form has both server & client side validations.",
   "type": "typo3-cms-extension",
   "keywords": ["TYPO3 CMS", "Contact form"],
   "homepage": "https://github.com/jainishsenjaliya/js_contact_form",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "support": {
     "issues": "https://github.com/jainishsenjaliya/js_contact_form/issues"
   },

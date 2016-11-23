@@ -1,4 +1,10 @@
-2016-09-08  Jainish Senjaliya <jainishsenjaliya@gmail.com>
+2016-11-19  Jainish Senjaliya <jainishsenjaliya@gmail.com>
+
+	* Major Changes. 
+	* Add captcha option [ Spam Protection ]
+	* Released version 4.0.0
+
+2016-11-08  Jainish Senjaliya <jainishsenjaliya@gmail.com>
 
 	* Major Changes. Create simple, smooth and smart plugin.
 	* After upgrade plugin you must need to update plugin configuration.

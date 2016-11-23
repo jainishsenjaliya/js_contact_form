@@ -56,8 +56,7 @@ $GLOBALS['TCA']['tx_jscontactform_domain_model_contactform']['palettes'] = array
 		'canNotCollapse' => 1
 	),
 	'others' => array(
-		'showitem' => 'image, --linebreak--,
-						message, --linebreak--,
+		'showitem' => 'message, --linebreak--,
 						description',
 		'canNotCollapse' => 1
 	),

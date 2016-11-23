@@ -222,6 +222,9 @@
 			<trans-unit id="tx_jscontactform_domain_model_contactform.gender.f">
 				<target>Female</target>
 			</trans-unit>
+			<trans-unit id="tx_jscontactform_domain_model_contactform.captcha">
+				<target>Captcha</target>
+			</trans-unit>
 
 			<trans-unit id="placeholder.name">
 				<source>Name</source>
@@ -306,6 +309,9 @@
 			</trans-unit>
 			<trans-unit id="placeholder.linkedin">
 				<source>Linkedin</source>
+			</trans-unit>
+			<trans-unit id="placeholder.captcha">
+				<source>Enter result here</source>
 			</trans-unit>
 
 			<trans-unit id="tx_jscontactform_domain_model_contactform.save">
@@ -401,6 +407,12 @@
 			</trans-unit>
 			<trans-unit id="message.error.blank_description">
 				<target>Description cannot be blank</target>
+			</trans-unit>
+			<trans-unit id="message.error.blank_captcha">
+				<target>Please enter captcha</target>
+			</trans-unit>
+			<trans-unit id="message.error.valid_captcha">
+				<target>Wrong captcha code entered</target>
 			</trans-unit>
 			<trans-unit id="tx_jscontactform_domain_model_contactform.error">
 				<target>Something missing while configuration</target>

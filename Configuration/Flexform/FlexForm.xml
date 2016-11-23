@@ -470,6 +470,10 @@
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.description</numIndex>
 										<numIndex index="1">description</numIndex>
 									</numIndex>
+									<numIndex index="24" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.captcha</numIndex>
+										<numIndex index="1">captcha</numIndex>
+									</numIndex>								
 								</items>
 								<size>11</size>
 								<default>first_name,last_name,email,message</default>
@@ -570,6 +574,10 @@
 									<numIndex index="23" type="array">
 										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.description</numIndex>
 										<numIndex index="1">description</numIndex>
+									</numIndex>
+									<numIndex index="24" type="array">
+										<numIndex index="0">LLL:EXT:js_contact_form/Resources/Private/Language/locallang.xlf:tx_jscontactform_domain_model_contactform.captcha</numIndex>
+										<numIndex index="1">captcha</numIndex>
 									</numIndex>
 								</items>
 								<size>11</size>
